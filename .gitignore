@@ -1,0 +1,14 @@
+.*
+!.gitignore
+!.phalcon.php
+!.htrouter.php
+.idea/
+*.log
+*.pid
+nbproject/
+.htaccess
+vendor/
+composer.phar
+composer.lock
+Vagrantfile
+runtime/

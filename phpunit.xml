@@ -1,0 +1,15 @@
+<phpunit bootstrap="tests/bootstrap.php">
+    <testsuites>
+        <testsuite name="swoole">
+            <directory>tests/ant</directory>
+        </testsuite>
+        <testsuite name="phalcon">
+            <directory>tests/phalcon</directory>
+        </testsuite>
+    </testsuites>
+    <testsuites>
+        <testsuite name="eye">
+            <directory>tests/eye</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
