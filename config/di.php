@@ -16,7 +16,7 @@ $di->setShared('config.cli', function () {
     return require(CONFIG_PATH . '/cli.php');
 });
 
-// http组件配置
+// 服务组件配置
 $di->setShared('config.server', function () {
     return require(CONFIG_PATH . '/server.php');
 });
@@ -29,8 +29,8 @@ $di->setShared('config.db', function() {
 // 默认数据库组件
 $di->setShared('db', function() use ($di) {
     $config       = $di->get('config.db');
-    $eventManager = $di->getShared('eventsManager');
     $mysql        = new \Phalcon\Db\Adapter\Pdo\Mysql($config['mysql']['default']);
+    $eventManager = $di->getShared('eventsManager');
 
     // 注册数据库环境变量(用于处理断线重连等)
     $eventManager->fire('db:registerEnvVars', $mysql);
