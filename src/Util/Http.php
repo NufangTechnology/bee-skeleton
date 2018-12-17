@@ -30,4 +30,7 @@ class Http extends Injectable
 
         return $this->queue;
     }
+
+    public function debug()
+    {}
 }

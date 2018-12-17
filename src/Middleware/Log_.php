@@ -250,4 +250,13 @@ class Log
         $filename = RUNTIME_PATH . '/' . date('Y-m-d') . '.log';
         file_put_contents($filename, json_encode($data) . PHP_EOL, 8);
     }
+
+    public function throwable($label, $level)
+    {}
+
+    public function error($label, $level)
+    {}
+
+    public function shutdown($label, $level)
+    {}
 }
