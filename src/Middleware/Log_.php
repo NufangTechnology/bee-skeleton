@@ -4,7 +4,7 @@ namespace Star\Middleware;
 use Phalcon\Di;
 use Phalcon\Events\Event;
 use Star\Util\Micro;
-use Star\Util\Exception;
+use Star\Util\ThrowException;
 use Star\Util\RabbitWorker;
 
 /**
@@ -12,7 +12,7 @@ use Star\Util\RabbitWorker;
  *
  * @package Pay\Http\Middleware
  */
-class Log
+class Log_
 {
     /**
      * 业务处理前置事件
@@ -100,7 +100,7 @@ class Log
         ];
 
         // 框架异常
-        if ($throwable instanceof Exception) {
+        if ($throwable instanceof ThrowException) {
             $running['data'] = $throwable->data;
             $running['args'] = $throwable->args;
         }
@@ -188,7 +188,7 @@ class Log
         ];
 
         // 框架异常
-        if ($throwable instanceof Exception) {
+        if ($throwable instanceof ThrowException) {
             $running['data'] = $throwable->data;
             $running['args'] = $throwable->args;
         }
@@ -250,13 +250,4 @@ class Log
         $filename = RUNTIME_PATH . '/' . date('Y-m-d') . '.log';
         file_put_contents($filename, json_encode($data) . PHP_EOL, 8);
     }
-
-    public function throwable($label, $level)
-    {}
-
-    public function error($label, $level)
-    {}
-
-    public function shutdown($label, $level)
-    {}
 }

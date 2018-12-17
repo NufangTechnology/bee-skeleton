@@ -9,6 +9,13 @@ namespace Star\Util\Throwable;
 abstract class AbstractError extends \Error
 {
     /**
+     * 异常错误级别码
+     *
+     * @var int
+     */
+    protected $level = 0;
+
+    /**
      * @var string
      */
     protected $message;
@@ -31,14 +38,14 @@ abstract class AbstractError extends \Error
     /**
      * @var array
      */
-    public $data = [];
+    protected $data = [];
 
     /**
      * 运行参数
      *
      * @var array
      */
-    public $args = [];
+    protected $args = [];
 
     /**
      * Throwable constructor.
@@ -56,5 +63,30 @@ abstract class AbstractError extends \Error
         $this->line    = $line;
 
         parent::__construct($message, $code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getData(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array
+     */
+    public function getArgs(): array
+    {
+        return $this->args;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLevel(): string
+    {
+//        return $this->level;
+        return '';
     }
 }

@@ -1,7 +1,7 @@
 <?php
 namespace Star\Middleware;
 
-use Star\Util\Exception;
+use Star\Util\ThrowException;
 use Star\Util\Status;
 use Phalcon\Events\Event;
 use Phalcon\Mvc\Micro;
@@ -23,7 +23,7 @@ class Route
      */
     public function beforeNotFound(Event $event, Micro $micro)
     {
-        Exception::urlNotFound(Status::E_404000);
+        ThrowException::urlNotFound(Status::E_404000);
     }
 
     /**

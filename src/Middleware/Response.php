@@ -1,7 +1,7 @@
 <?php
 namespace Star\Middleware;
 
-use Star\Util\Exception;
+use Star\Util\ThrowException;
 use Phalcon\Events\Event;
 use Star\Util\Micro;
 
@@ -51,7 +51,7 @@ class Response
             'msg'    => $e->getMessage(),
         ];
 
-        if ($e instanceof Exception) {
+        if ($e instanceof ThrowException) {
             $data['info'] = $e->data;
         } else {
             $data['info'] = new \stdClass;

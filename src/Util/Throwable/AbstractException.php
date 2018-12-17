@@ -9,16 +9,23 @@ namespace Star\Util\Throwable;
 abstract class AbstractException extends \Exception
 {
     /**
+     * 异常错误级别码
+     *
+     * @var int
+     */
+    protected $level = 0;
+
+    /**
      * @var array
      */
-    public $data = [];
+    protected $data = [];
 
     /**
      * 运行参数
      *
      * @var array
      */
-    public $args = [];
+    protected $args = [];
 
     /**
      * Throwable constructor.
@@ -36,5 +43,30 @@ abstract class AbstractException extends \Exception
         $this->args    = $args;
 
         parent::__construct($message, $code);
+    }
+
+    /**
+     * @return array
+     */
+    public function getData(): array
+    {
+        return $this->data;
+    }
+
+    /**
+     * @return array
+     */
+    public function getArgs(): array
+    {
+        return $this->args;
+    }
+
+    /**
+     * @return string
+     */
+    public function getLevel(): string
+    {
+//        return $this->level;
+        return '';
     }
 }
