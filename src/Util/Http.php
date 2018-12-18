@@ -9,6 +9,7 @@ use Phalcon\Config;
  *
  * @package Star\Util
  * @property Config $global
+ * @property Logger $logger
  */
 class Http extends Injectable
 {
