@@ -6,5 +6,5 @@ namespace Star\Util\Throwable;
  *
  * @package Eye\Util\Throwable
  */
-class ResourceNotFoundException extends AbstractException
+class ResourceNotFoundException extends AbstractRuntimeException
 {}

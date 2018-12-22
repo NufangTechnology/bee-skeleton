@@ -1,6 +1,7 @@
 <?php
 namespace Star\Util;
 
+use Star\Util\Throwable\AbstractRuntimeException;
 use Star\Util\Throwable\ClientParamsInvalidException;
 use Star\Util\Throwable\DbDeleteException;
 use Star\Util\Throwable\DbInsertException;
@@ -22,7 +23,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws ClientParamsInvalidException
+     * @throws AbstractRuntimeException
      */
     public static function clientParamInvalid(array $status, array $data = [], array $args = [])
     {
@@ -35,7 +36,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws DbDeleteException
+     * @throws AbstractRuntimeException
      */
     public static function dbDeleteFailed(array $status, array $data = [], array $args = [])
     {
@@ -48,7 +49,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws DbInsertException
+     * @throws AbstractRuntimeException
      */
     public static function dbInsertFailed(array $status, array $data = [], array $args = [])
     {
@@ -61,7 +62,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws DbUpdateException
+     * @throws AbstractRuntimeException
      */
     public static function dbUpdateFailed(array $status, array $data = [], array $args = [])
     {
@@ -74,7 +75,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws ResourceNotFoundException
+     * @throws AbstractRuntimeException
      */
     public static function resourceNotFound(array $status, array $data = [], array $args = [])
     {
@@ -87,7 +88,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws UnauthorizedException
+     * @throws AbstractRuntimeException
      */
     public static function unauthorized(array $status, array $data = [], array $args = [])
     {
@@ -98,7 +99,7 @@ class ThrowException
      * @param array $status
      * @param array $data
      * @param array $args
-     * @throws UrlNotFoundException
+     * @throws AbstractRuntimeException
      */
     public static function urlNotFound(array $status, array $data = [], array $args = [])
     {

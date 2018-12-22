@@ -6,15 +6,8 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-abstract class AbstractException extends \Exception
+abstract class AbstractRuntimeException extends \Exception
 {
-    /**
-     * 异常错误级别码
-     *
-     * @var int
-     */
-    protected $level = 0;
-
     /**
      * @var array
      */
@@ -59,14 +52,5 @@ abstract class AbstractException extends \Exception
     public function getArgs(): array
     {
         return $this->args;
-    }
-
-    /**
-     * @return string
-     */
-    public function getLevel(): string
-    {
-//        return $this->level;
-        return '';
     }
 }

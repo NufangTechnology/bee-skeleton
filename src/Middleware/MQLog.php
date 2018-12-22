@@ -1,26 +1,19 @@
 <?php
 namespace Star\Middleware;
 
-use Phalcon\Events\Event;
-use Phalcon\Mvc\Micro;
+use Star\Util\LogCollector;
 
-class MQLog
+/**
+ * MQ 日志收集中间件
+ *
+ * @package Star\Middleware
+ */
+class MQLog extends LogCollector
 {
-    public function beforeHandle(Event $event, Micro $micro)
-    {}
-
-    public function handle(Event $event, Micro $micro, array $params = [])
-    {}
-
-    public function afterHandle(Event $event, Micro $micro, array $params = [])
-    {}
-
-    public function throwable()
-    {}
-
-    public function error()
-    {}
-
-    public function shutdown()
-    {}
+    /**
+     * 日志名称
+     *
+     * @var string
+     */
+    protected $name = 'MQ';
 }

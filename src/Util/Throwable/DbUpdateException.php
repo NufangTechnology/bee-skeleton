@@ -6,5 +6,5 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-class DbUpdateException extends AbstractException
+class DbUpdateException extends AbstractRuntimeException
 {}

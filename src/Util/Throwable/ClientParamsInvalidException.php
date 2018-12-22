@@ -6,5 +6,5 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-class ClientParamsInvalidException extends AbstractException
+class ClientParamsInvalidException extends AbstractRuntimeException
 {}

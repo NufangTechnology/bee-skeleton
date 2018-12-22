@@ -6,7 +6,7 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-abstract class AbstractError extends \Error
+abstract class AbstractRuntimeError extends \Error
 {
     /**
      * 异常错误级别码

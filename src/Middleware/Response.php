@@ -1,9 +1,9 @@
 <?php
 namespace Star\Middleware;
 
-use Star\Util\ThrowException;
 use Phalcon\Events\Event;
 use Star\Util\Micro;
+use Star\Util\Throwable\AbstractException;
 
 /**
  * 响应处理中间件
@@ -51,8 +51,8 @@ class Response
             'msg'    => $e->getMessage(),
         ];
 
-        if ($e instanceof ThrowException) {
-            $data['info'] = $e->data;
+        if ($e instanceof AbstractException) {
+            $data['info'] = $e->getData();
         } else {
             $data['info'] = new \stdClass;
         }

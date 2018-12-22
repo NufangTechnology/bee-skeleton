@@ -6,6 +6,6 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-class DbDeleteException extends AbstractException
+class DbDeleteException extends AbstractRuntimeException
 {
 }

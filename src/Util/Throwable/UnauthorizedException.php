@@ -6,5 +6,5 @@ namespace Star\Util\Throwable;
  *
  * @package Eye\Util\Throwable
  */
-class UnauthorizedException extends AbstractException
+class UnauthorizedException extends AbstractRuntimeException
 {}

@@ -7,5 +7,5 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-class RunningError extends AbstractError
+class RunningError extends AbstractRuntimeError
 {}

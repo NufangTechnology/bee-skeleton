@@ -30,12 +30,14 @@ class Micro extends \Phalcon\Mvc\Micro
         $this->startTime = microtime(true);
 
         try {
+            // 记录handle日志
+            $this->eventsManager->fire('log:beforeHandle', $this);
 
             // 执行业务处理
             $result = parent::handle($uri);
 
             // 记录handle日志
-            $this->eventsManager->fire('log:afterHandleRequest', $this, $result);
+            $this->eventsManager->fire('log:afterHandle', $this, $result);
             // 输出相应内容
             $this->eventsManager->fire('micro:afterHandleRequest', $this, $result);
 

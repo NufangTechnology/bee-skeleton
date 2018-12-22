@@ -20,4 +20,4 @@ $eventsManager->attach('micro', new \Star\Middleware\Response);
 // MySQL数据库中间件
 $eventsManager->attach('db', new \Star\Middleware\MySQL);
 // 日志中间件
-$eventsManager->attach('log', new \Star\Middleware\Log);
+$eventsManager->attach('log', new \Star\Middleware\HttpLog);

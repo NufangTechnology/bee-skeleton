@@ -40,34 +40,20 @@ $di->setShared('db', function() use ($di) {
     return $mysql;
 });
 
-// 默认redis组件
-$di->setShared('db.redis.default', function () use ($di) {
-    // 读取redis配置
-    $config = $di->get('config.db');
-    $config = $config['redis']['default'];
+// 日志服务组件
+$di->setShared('service.logger.http', function () {
+    $logger = new Bee\Logger\Adapter\Stream(RUNTIME_PATH);
+    $logger->setFormatter(
+        new \Bee\Logger\Formatter\Json(
+            [
+                new \Bee\Logger\Processor\MemoryUsageProcessor,
+                new \Bee\Logger\Processor\MemoryPeakUsageProcessor,
+                new \Bee\Logger\Processor\ProcessIdProcessor,
+            ]
+        )
+    );
 
-    try {
-        $redis = new \Redis();
-
-        // 根据配置启用长连接
-        if (empty($config['persistent'])) {
-            $redis->pconnect($config['host'], $config['port']);
-        } else {
-            $redis->connect($config['host'], $config['port']);
-        }
-
-        // 密码
-        if (!empty($config['auth'])) {
-            $success = $redis->auth($config['auth']);
-            if (!$success) {
-                throw new \Star\Util\Exception\RedisException('Redis密码错误', 500, [], $config);
-            }
-        }
-
-        return $redis;
-    } catch (Exception $e) {
-        throw new \Star\Util\Exception\RedisException($e->getMessage(), 500, [], $config);
-    }
+    return $logger;
 });
 
 // Http 服务组件

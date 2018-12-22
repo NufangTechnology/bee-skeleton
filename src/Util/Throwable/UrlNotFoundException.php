@@ -6,6 +6,6 @@ namespace Star\Util\Throwable;
  *
  * @package Eye\Util\Throwable
  */
-class UrlNotFoundException extends AbstractException
+class UrlNotFoundException extends AbstractRuntimeException
 {
 }

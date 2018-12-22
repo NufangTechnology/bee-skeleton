@@ -6,5 +6,5 @@ namespace Star\Util\Throwable;
  *
  * @package Star\Util\Throwable
  */
-class DbInsertException extends AbstractException
+class DbInsertException extends AbstractRuntimeException
 {}

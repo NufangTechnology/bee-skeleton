@@ -10,7 +10,13 @@
     "require": {
         "php": ">7.0",
         "ext-swoole": "^4.0",
-        "ext-phalcon": "^3.4"
+        "ext-phalcon": "^3.4",
+        "bee-framework/logger": "^0.0.3",
+        "ext-json": "*",
+        "bee-framework/cli": "^1.0",
+        "bee-framework/http": "^1.0",
+        "bee-framework/util": "^1.0",
+        "bee-framework/deploy": "^1.0"
     },
     "require-dev": {
         "phalcon/ide-stubs": "*",

@@ -5,7 +5,6 @@ use Star\Util\ThrowException;
 use Star\Util\Status;
 use Phalcon\Events\Event;
 use Phalcon\Mvc\Micro;
-use Star\Util\Exception\UrlNotFoundException;
 
 /**
  * 路由中间件
@@ -19,7 +18,7 @@ class Route
      *
      * @param Event $event
      * @param Micro $micro
-     * @throws UrlNotFoundException
+     * @throws \Star\Util\Throwable\AbstractRuntimeException
      */
     public function beforeNotFound(Event $event, Micro $micro)
     {
