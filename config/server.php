@@ -8,9 +8,9 @@ return [
         'option' => [
             'pid_file'          => RUNTIME_PATH . '/http.pid',
             'log_file'          => RUNTIME_PATH . '/http_server.log',
-            'worker_num'        => 8,
+            'worker_num'        => 1,
             'daemonize'         => true,
-            'dispatch_mode'     => 3,
+            'dispatch_mode'     => 7,
             'enable_coroutine'  => false,
             'open_cpu_affinity' => true,
             'max_request'       => 5000, // 单个worker处理请求数达到5000，自动退出

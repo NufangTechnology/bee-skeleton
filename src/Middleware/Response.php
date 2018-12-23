@@ -3,7 +3,7 @@ namespace Star\Middleware;
 
 use Phalcon\Events\Event;
 use Star\Util\Micro;
-use Star\Util\Throwable\AbstractException;
+use Star\Util\Throwable\AbstractRuntimeException;
 
 /**
  * 响应处理中间件
@@ -47,11 +47,11 @@ class Response
         // 准备返回数据
         $data = [
             'result' => false,
-            'error'   => $e->getCode(),
+            'error'  => $e->getCode(),
             'msg'    => $e->getMessage(),
         ];
 
-        if ($e instanceof AbstractException) {
+        if ($e instanceof AbstractRuntimeException) {
             $data['info'] = $e->getData();
         } else {
             $data['info'] = new \stdClass;

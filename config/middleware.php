@@ -19,5 +19,9 @@ $eventsManager->attach('micro', new \Star\Middleware\Route);
 $eventsManager->attach('micro', new \Star\Middleware\Response);
 // MySQL数据库中间件
 $eventsManager->attach('db', new \Star\Middleware\MySQL);
-// 日志中间件
-$eventsManager->attach('log', new \Star\Middleware\HttpLog);
+// HTTP 日志中间件
+$eventsManager->attach('http-log', new \Star\Middleware\HttpLog);
+// MQ 日志中间件
+$eventsManager->attach('mq-log', new \Star\Middleware\MQLog);
+// SYSTEM 日志中间件
+$eventsManager->attach('system-log', new \Star\Middleware\SystemLog);

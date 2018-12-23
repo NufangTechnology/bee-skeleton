@@ -4,16 +4,16 @@ namespace Star\Middleware;
 use Star\Util\LogCollector;
 
 /**
- * HTTP 日志收集中间件
+ * System [框架]日志收集中间件
  *
  * @package Star\Middleware
  */
-class HttpLog extends LogCollector
+class SystemLog extends LogCollector
 {
     /**
      * 日志名称
      *
      * @var string
      */
-    protected $name = 'HTTP';
+    protected $name = 'SYSTEM';
 }

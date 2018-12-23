@@ -43,9 +43,9 @@ class Queue extends Injectable
             self::EX_GROUP,
             self::ROUTE_JOIN_GROUP,
             [
-                'no'      => $this->global['requestId'],
-                'user_id' => $this->global['userId'],
-                'data'    => $data
+                'unique_id'  => $this->global['uniqueId'],
+                'user_id'    => $this->global['userId'],
+                'data'       => $data
             ]
         );
     }

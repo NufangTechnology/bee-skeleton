@@ -34,6 +34,9 @@ class Route
      */
     public function beforeExecuteRoute(Event $event, Micro $micro)
     {
+        // 记录handle日志
+        $micro->eventsManager->fire('http-log:beforeHandle', $micro);
+
         // 重置路由匹配的类
         $activeHandler = $micro->getActiveHandler();
         if (is_array($activeHandler)) {

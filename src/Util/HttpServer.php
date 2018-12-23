@@ -64,12 +64,12 @@ class HttpServer extends Server
 
         // 注册错误处理方法
         register_shutdown_function(function () use ($micro) {
-            $micro->eventsManager->fire("log:handleShutdown", $micro);
+            $micro->eventsManager->fire("http-log:shutdown", $micro);
             $micro->eventsManager->fire('micro:afterHandleShutdown', $micro);
         });
         // 错误处理方法
         set_error_handler(function () use ($micro) {
-            $micro->eventsManager->fire("log:handleError", $micro, func_get_args());
+            $micro->eventsManager->fire("http-log:throwError", $micro, func_get_args());
         }, E_ALL);
 
         // micro注入事件管理器
