@@ -111,7 +111,12 @@ abstract class LogCollector
             'unique_id'  => $global['uniqueId'],
             'user_id'   => $global['user_id'],
             'label'      => "{$this->name}:exception",
-            'extra'     => []
+            'extra'     => [
+                'message' => $exception->getMessage(),
+                'code'    => $exception->getCode(),
+                'line'    => $exception->getLine(),
+                'file'    => $exception->getFile(),
+            ]
         ];
 
         // 获取手动抛出异常信息
