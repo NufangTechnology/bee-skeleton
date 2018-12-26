@@ -40,7 +40,7 @@ class Micro extends \Phalcon\Mvc\Micro
             $this->eventsManager->fire('micro:afterHandleRequest', $this, $result);
 
         } catch (\Throwable $e) {
-            $this->eventsManager->fire("http-log:handleThrowable", $this, $e);
+            $this->eventsManager->fire("http-log:throwException", $this, $e);
             // 记录handle日志
             $this->eventsManager->fire('micro:afterHandleException', $this, $e);
         }
