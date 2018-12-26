@@ -56,7 +56,7 @@ abstract class RabbitWorker extends \Bee\Mq\Consumer\Rabbit
 
         } catch (\Throwable $e) {
             // 错误记录
-            $this->eventsManager->fire("log:handleMqThrowable", $this, $e);
+            $this->eventsManager->fire("mq-log:throwException", $this, $e);
             // 退出当前进程
             $this->workerExit();
         }
@@ -79,7 +79,7 @@ abstract class RabbitWorker extends \Bee\Mq\Consumer\Rabbit
      */
     public function exception(\Throwable $e)
     {
-        $this->eventsManager->fire("log:handleMqThrowable", $this, $e);
+        $this->eventsManager->fire("system-log:throwException", $this, $e);
         // 退出当前进程
         $this->workerExit();
     }
@@ -89,7 +89,7 @@ abstract class RabbitWorker extends \Bee\Mq\Consumer\Rabbit
      */
     public function error()
     {
-        $this->eventsManager->fire("log:handleMqError", $this, func_get_args());
+        $this->eventsManager->fire("system-log:throwError", $this, func_get_args());
     }
 
     public function workerExit()

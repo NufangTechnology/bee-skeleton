@@ -15,6 +15,6 @@ class Demo extends Http
      */
     public function hello()
     {
-        return ['hello word!'];
+        return [$_SERVER, $this->global['uniqueId'], $this->global['userId']];
     }
 }

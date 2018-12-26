@@ -41,19 +41,8 @@ $di->setShared('db', function() use ($di) {
 });
 
 // 日志服务组件
-$di->setShared('service.logger.http', function () {
-    $logger = new Bee\Logger\Adapter\Stream(RUNTIME_PATH);
-    $logger->setFormatter(
-        new \Bee\Logger\Formatter\Json(
-            [
-                new \Bee\Logger\Processor\MemoryUsageProcessor,
-                new \Bee\Logger\Processor\MemoryPeakUsageProcessor,
-                new \Bee\Logger\Processor\ProcessIdProcessor,
-            ]
-        )
-    );
-
-    return $logger;
+$di->setShared('service.logger', function () {
+    return new Bee\Logger\Adapter\Stream(RUNTIME_PATH);
 });
 
 // Http 服务组件
