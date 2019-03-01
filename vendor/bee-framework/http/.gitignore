@@ -1,0 +1,10 @@
+.*
+*.phar
+!.gitignore
+.idea/
+*.log
+*.pid
+nbproject/
+.htaccess
+vendor/
+Vagrantfile

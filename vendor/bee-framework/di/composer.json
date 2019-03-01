@@ -1,0 +1,29 @@
+{
+    "name": "bee-framework/di",
+    "description": "Bee框架d组件",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "bee-framework/util": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "沸羊羊",
+            "email": "anoxia@engineer.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Bee\\Di\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bee\\Di\\Tests\\": "tests/"
+        }
+    }
+}

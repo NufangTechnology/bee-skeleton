@@ -1,0 +1,8 @@
+.*
+!.gitignore
+.idea/
+*.log
+nbproject/
+.htaccess
+vendor/
+Vagrantfile

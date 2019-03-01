@@ -1,0 +1,9 @@
+# standards
+/.cache/
+/.env
+/.idea/
+/vendor/
+composer.lock
+*.local.*
+clover.xml
+coverage.xml

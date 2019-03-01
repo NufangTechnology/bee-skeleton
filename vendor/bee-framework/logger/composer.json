@@ -1,0 +1,29 @@
+{
+    "name": "bee-framework/logger",
+    "description": "Bee框架日志件",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "ext-seaslog": ">=1.9",
+        "bee-framework/util": "^2.0"
+    },
+    "require-dev": {
+        "vicens/seaslog-helper": "^0.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bee\\Logger\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bee\\Logger\\Tests\\": "./tests"
+        }
+    },
+    "authors": [
+        {
+            "name": "沸羊羊",
+            "email": "anoxia@engineer.com"
+        }
+    ]
+}

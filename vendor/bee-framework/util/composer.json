@@ -1,0 +1,17 @@
+{
+  "name": "bee-framework/util",
+  "description": "Bee框架通用类库",
+  "require-dev": {
+    "phpunit/phpunit": "^7.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "Bee\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Bee\\Test\\": "src/tests/"
+    }
+  }
+}

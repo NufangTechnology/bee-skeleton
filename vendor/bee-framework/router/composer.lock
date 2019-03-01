@@ -1,0 +1,248 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "0a9846e6f4ade97022b1ce6be674f6f7",
+    "packages": [
+        {
+            "name": "adhocore/cli",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adhocore/php-cli.git",
+                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adhocore/php-cli/zipball/9dbab2581b1797b9b37caf83102ec0335e046f7d",
+                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ahc\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jitendra Adhikari",
+                    "email": "jiten.adhikary@gmail.com"
+                }
+            ],
+            "description": "Command line interface library for PHP",
+            "keywords": [
+                "PHP7",
+                "argument-parser",
+                "argv-parser",
+                "cli",
+                "cli-action",
+                "cli-app",
+                "cli-color",
+                "cli-option",
+                "cli-writer",
+                "command",
+                "console",
+                "console-app",
+                "php-cli",
+                "stream-input",
+                "stream-output"
+            ],
+            "time": "2018-09-06T15:32:22+00:00"
+        },
+        {
+            "name": "bee-framework/http",
+            "version": "dev-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NufangTechnology/bee-http.git",
+                "reference": "413a5f3d243457356036b2bea8eb6511dcae6f7e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-http/zipball/413a5f3d243457356036b2bea8eb6511dcae6f7e",
+                "reference": "413a5f3d243457356036b2bea8eb6511dcae6f7e",
+                "shasum": ""
+            },
+            "require": {
+                "adhocore/cli": "^0.3.2",
+                "bee-framework/util": "^1.0",
+                "ext-json": "*",
+                "ext-pcntl": "*",
+                "ext-phalcon": "^3.4.0",
+                "ext-swoole": "^4.1.0",
+                "fastd/http": "^3.2",
+                "php": "^7.2.0"
+            },
+            "require-dev": {
+                "eaglewu/swoole-ide-helper": "master-dev",
+                "phalcon/ide-stubs": "*",
+                "phpunit/phpunit": "^7.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bee\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "南山吴彦祖",
+                    "email": "anoxia@engineer.com"
+                }
+            ],
+            "description": "Bee框架http组件",
+            "time": "2019-01-16T17:00:46+00:00"
+        },
+        {
+            "name": "bee-framework/util",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NufangTechnology/bee-util.git",
+                "reference": "b3a4421352d60acf5ec3126638330a0f650192ce"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/b3a4421352d60acf5ec3126638330a0f650192ce",
+                "reference": "b3a4421352d60acf5ec3126638330a0f650192ce",
+                "shasum": ""
+            },
+            "require": {
+                "ext-phalcon": "^3.2.0"
+            },
+            "require-dev": {
+                "phalcon/ide-stubs": "*",
+                "phpunit/phpunit": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bee\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Bee框架通用类库",
+            "time": "2018-12-07T06:30:12+00:00"
+        },
+        {
+            "name": "fastd/http",
+            "version": "v3.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fastdlabs/http.git",
+                "reference": "4be3d6fd913f63f357dae037f52d42da2fe4c0a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fastdlabs/http/zipball/4be3d6fd913f63f357dae037f52d42da2fe4c0a1",
+                "reference": "4be3d6fd913f63f357dae037f52d42da2fe4c0a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastD\\Http\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "janhuang",
+                    "email": "bboyjanhuang@gmail.com"
+                }
+            ],
+            "description": "FastD Http",
+            "keywords": [
+                "FastD",
+                "http"
+            ],
+            "time": "2018-05-08T09:11:03+00:00"
+        },
+        {
+            "name": "psr/http-message",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-message.git",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "reference": "f6561bf28d520154e4b0ec72be95418abe6d9363",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for HTTP messages",
+            "homepage": "https://github.com/php-fig/http-message",
+            "keywords": [
+                "http",
+                "http-message",
+                "psr",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-06T14:39:51+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "bee-framework/http": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.2.0"
+    },
+    "platform-dev": []
+}

@@ -1,0 +1,11 @@
+.*
+*.phar
+!.gitignore
+.idea/
+*.log
+*.pid
+nbproject/
+.htaccess
+vendor/
+composer.lock
+Vagrantfile

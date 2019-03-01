@@ -1,0 +1,74 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d2f2c3f307c22471f18dc0307490c98c",
+    "packages": [
+        {
+            "name": "bee-framework/util",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NufangTechnology/bee-util.git",
+                "reference": "6515fa029a2b34ed60afb8926bc5d16d1f9b679b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/6515fa029a2b34ed60afb8926bc5d16d1f9b679b",
+                "reference": "6515fa029a2b34ed60afb8926bc5d16d1f9b679b",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bee\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Bee框架通用类库",
+            "time": "2019-01-18T02:08:57+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "swoft/swoole-ide-helper",
+            "version": "v4.2.12",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swoft-cloud/swoole-ide-helper.git",
+                "reference": "912a2c5db04c859531d7e89a1a985bb63354fe8d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swoft-cloud/swoole-ide-helper/zipball/912a2c5db04c859531d7e89a1a985bb63354fe8d",
+                "reference": "912a2c5db04c859531d7e89a1a985bb63354fe8d",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "description": "ide helper for Swoft and Swoole",
+            "keywords": [
+                "ide-helper",
+                "php",
+                "swoft",
+                "swoole"
+            ],
+            "time": "2019-01-06T11:09:21+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

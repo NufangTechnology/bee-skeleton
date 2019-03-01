@@ -4,9 +4,9 @@
  */
 return [
     [
-        'class' => \Star\Cli\Http::class,
+        'class' => \Star\Cli\Http::class
     ],
     [
-        'class' => \Star\Cli\Deploy::class,
+        'class' => \Star\Cli\Worker::class
     ]
 ];

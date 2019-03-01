@@ -1,0 +1,131 @@
+[2019-03-01 08:02:44 #11306.1]	NOTICE	Server is shutdown now.
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 0)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 7)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 1)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 5)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 3)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 4)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 6)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+PHP Fatal error:  Uncaught Bee\Di\Exception: Service 'logger' wasn't found in the dependency injection container in /vagrant/vendor/bee-framework/di/src/Container.php:116
+Stack trace:
+#0 /vagrant/vendor/bee-framework/di/src/Container.php(149): Bee\Di\Container->get('logger', NULL)
+#1 /vagrant/app/Util/HttpServer.php(56): Bee\Di\Container->getShared('logger')
+#2 [internal function]: Star\Util\HttpServer->Star\Util\{closure}(2, 'var_export does...', '/vagrant/app/he...', 5, Array)
+#3 /vagrant/app/helper.php(5): var_export(Object(Swoole\Http\Server), true)
+#4 /vagrant/app/Util/HttpServer.php(78): PR(Object(Swoole\Http\Server))
+#5 [internal function]: Star\Util\HttpServer->onWorkerStop(Object(Swoole\Http\Server), 2)
+#6 /vagrant/vendor/bee-framework/http/src/Server.php(132): Swoole\Server->start()
+#7 /vagrant/vendor/bee-framework/http/src/Server.php(164): Bee\Http\Server->start()
+#8 /vagrant/app/Cli/Http.php(74): Bee\Http\Server->restart(NULL)
+#9 /vagrant/vendor/adhocore/cli/src/Application.php(357): Star\Cli\Http->execute('restart in /vagrant/vendor/bee-framework/di/src/Container.php on line 116
+[2019-03-01 08:03:06 #11319.1]	NOTICE	Server is shutdown now.
+[2019-03-01 08:04:24 #11331.1]	NOTICE	Server is shutdown now.
+[2019-03-01 08:04:42 #11344.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:02:41 #11357.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:03:14 #11384.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:10:32 #11397.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:14:52 #11410.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:15:32 #11423.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:16:12 #11437.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:16:39 #11450.1]	NOTICE	Server is shutdown now.
+[2019-03-01 09:17:13 #11463.1]	NOTICE	Server is shutdown now.
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
+[2019-03-01 09:19:18 #11476.1]	NOTICE	Server is shutdown now.

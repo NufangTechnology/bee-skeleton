@@ -1,6 +1,8 @@
 {
-    "name": "bee-framework/skeleton",
-    "description": "Bee框架骨架",
+    "name": "xhb/app-management",
+    "license": "proprietary",
+    "description": "服务管理与日志收集",
+    "type": "project",
     "authors": [
         {
             "name": "南山吴彦祖",
@@ -8,29 +10,23 @@
         }
     ],
     "require": {
-        "php": ">7.0",
-        "ext-swoole": "^4.0",
-        "ext-phalcon": "^3.4",
-        "ext-json": "*",
-        "bee-framework/logger": "^0.0",
-        "bee-framework/cli": "^1.0",
-        "bee-framework/http": "^1.0",
-        "bee-framework/util": "^1.0",
-        "bee-framework/deploy": "^1.0"
-    },
-    "require-dev": {
-        "phalcon/ide-stubs": "*",
-        "eaglewu/swoole-ide-helper": "master-dev"
+        "php": ">=7.1",
+        "bee-framework/di": "dev-master",
+        "bee-framework/http": "dev-master",
+        "bee-framework/cli": "dev-master",
+        "bee-framework/router": "dev-master",
+        "bee-framework/db": "dev-master",
+        "bee-framework/logger": "dev-master",
+        "bee-framework/process": "dev-master",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
-            "Star\\": "src/"
+            "Star\\": "app/"
         },
-        "files": ["src/helper.php"]
+        "files": ["app/helper.php"]
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Star\\Test\\": "tests/"
-        }
+    "require-dev": {
+        "swoft/swoole-ide-helper": "^4.2"
     }
 }

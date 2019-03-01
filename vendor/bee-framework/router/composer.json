@@ -1,0 +1,27 @@
+{
+    "name": "bee-framework/router",
+    "description": "Bee框架路由组件",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "沸羊羊",
+            "email": "anoxia@engineer.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.0",
+        "bee-framework/util": "^2.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Bee\\Router\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bee\\Router\\Tests\\": "tests/"
+        }
+    }
+}

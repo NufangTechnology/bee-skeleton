@@ -1,0 +1,5 @@
+.*
+!.gitignore
+nbproject/
+Vagrantfile
+vendor/

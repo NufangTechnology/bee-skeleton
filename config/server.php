@@ -2,35 +2,33 @@
 return [
     // http服务配置
     'http' => [
-        'name'   => 'bee-http',
+        'name'   => 'app-manage-http',
         'host'   => '0.0.0.0',
-        'port'   => 8000,
+        'port'   => 8002,
         'option' => [
-            'pid_file'          => RUNTIME_PATH . '/http.pid',
-            'log_file'          => RUNTIME_PATH . '/http_server.log',
-            'worker_num'        => 1,
-            'daemonize'         => true,
-            'dispatch_mode'     => 7,
-            'enable_coroutine'  => false,
-            'open_cpu_affinity' => true,
-            'max_request'       => 5000, // 单个worker处理请求数达到5000，自动退出
-            'backlog'           => 1024,
+            'pid_file'              => RUNTIME_PATH . '/http.pid',
+            'log_file'              => RUNTIME_PATH . '/http_server.log',
+            'worker_num'            => 4,
+            'task_worker_num'       => 4,
+            'daemonize'             => true,
+            'open_cpu_affinity'     => true,
+            'max_request'           => 5000, // 单个worker处理请求数达到5000，自动退出
+            'max_coroutine'         => 9000,
+            'http_compression'      => true,
+            'task_enable_coroutine' => true,
         ]
     ],
 
-    // MQ服务配置
-    'mq' => [
-        'name'     => 'group-mq',
-        'pidFile'  => RUNTIME_PATH . '/mq.pid',
-        'logFile'  => RUNTIME_PATH . '/mq.log',
-        'daemon'   => true, // 以守护进程模式运行
-        'redirect' => false, // 不启用标准输出
-        'format'   => 'igbinary', // MQ数据格式
+    // 定时器配置
+    'worker' => [
+        'name'     => 'app-manage-worker',
+        'pidFile'  => RUNTIME_PATH . '/worker.pid',
+        'daemon'   => true,
+        'redirect' => false
     ],
 
-    // 部署服务配置
-    'deploy' => [
-        'host'  => 'http://host/', // 配置拉取接口地址
-        'token' => '', // 身份令牌（来自部署用户组）
-    ]
+    // 日志服务配置
+    'logger' => [
+        'base_dir'    => RUNTIME_PATH,
+    ],
 ];

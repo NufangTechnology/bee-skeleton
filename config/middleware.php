@@ -1,27 +1,8 @@
 <?php
-/**
- * 中间件绑定配置文件
- *
- * @var \Phalcon\Di $di
- * @var \Phalcon\Events\Manager $eventsManager
- */
-
-// 获取事件管理器
-$eventsManager = $di->getShared('eventsManager');
-
-// 注册跨域中间件
-$eventsManager->attach('micro', new \Star\Middleware\CORS);
-// 注册用户身份认证中间件
-$eventsManager->attach('micro', new \Star\Middleware\Auth);
-// 注册路由挂载中间件
-$eventsManager->attach('micro', new \Star\Middleware\Route);
-// 注册Response中间件 - 处理返回内容体
-$eventsManager->attach('micro', new \Star\Middleware\Response);
-// MySQL数据库中间件
-$eventsManager->attach('db', new \Star\Middleware\MySQL);
-// HTTP 日志中间件
-$eventsManager->attach('http-log', new \Star\Middleware\HttpLog);
-// MQ 日志中间件
-$eventsManager->attach('mq-log', new \Star\Middleware\MQLog);
-// SYSTEM 日志中间件
-$eventsManager->attach('system-log', new \Star\Middleware\SystemLog);
+// 中间件绑定配置文件
+return [
+    \Star\Middleware\CORS::class,
+    \Star\Middleware\Route::class,
+    \Star\Middleware\Auth::class,
+    \Star\Middleware\Dispatch::class,
+];

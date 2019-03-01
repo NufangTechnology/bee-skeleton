@@ -1,0 +1,68 @@
+#!/usr/bin/env php
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| 运行环境设置
+|--------------------------------------------------------------------------
+*/
+
+// 开启错误显示
+ini_set('display_errors',false);
+// 开启错误报告
+ini_set('error_reporting', E_ALL);
+// 取消脚本最大执行时间
+ini_set('max_execution_time', 0);
+// 设置境时区
+ini_set('date.timezone', 'PRC');
+
+
+/*
+|--------------------------------------------------------------------------
+| 环境常量定义（框架）
+|--------------------------------------------------------------------------
+*/
+
+// 系统根路径
+define('ROOT_PATH', __DIR__);
+// 运行时目录
+define('RUNTIME_PATH', ROOT_PATH . '/runtime');
+// 配置目录
+define('CONFIG_PATH', ROOT_PATH . '/config');
+
+
+/*
+|--------------------------------------------------------------------------
+| 加载composer
+|--------------------------------------------------------------------------
+*/
+
+$autoloadFile = ROOT_PATH . '/vendor/autoload.php';
+if (!is_file($autoloadFile)) {
+    fwrite(STDERR, 'Composer加载文件未找到，请更新相关依赖。');
+    exit(0);
+}
+require $autoloadFile;
+
+
+/*
+|--------------------------------------------------------------------------
+| 初始化Phalcon并引导相关服务启动
+|--------------------------------------------------------------------------
+*/
+
+try {
+    // 创建容器
+    $di = new \Bee\Di\Container();
+
+    SeasLog::setBasePath(RUNTIME_PATH);
+
+    // 加载框架自定义组件
+    require(CONFIG_PATH . '/di.php');
+
+    // 应用启动
+    (new \Bee\Cli\Console($di->getShared('config.cli')))->launch($_SERVER['argv']);
+
+} catch (\Throwable $e) {
+    print_r($e);
+}

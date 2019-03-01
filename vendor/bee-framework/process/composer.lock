@@ -1,0 +1,155 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4532e937d52d153b2980ecc639cfe0e8",
+    "packages": [
+        {
+            "name": "adhocore/cli",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adhocore/php-cli.git",
+                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adhocore/php-cli/zipball/9dbab2581b1797b9b37caf83102ec0335e046f7d",
+                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ahc\\Cli\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jitendra Adhikari",
+                    "email": "jiten.adhikary@gmail.com"
+                }
+            ],
+            "description": "Command line interface library for PHP",
+            "keywords": [
+                "PHP7",
+                "argument-parser",
+                "argv-parser",
+                "cli",
+                "cli-action",
+                "cli-app",
+                "cli-color",
+                "cli-option",
+                "cli-writer",
+                "command",
+                "console",
+                "console-app",
+                "php-cli",
+                "stream-input",
+                "stream-output"
+            ],
+            "time": "2018-09-06T15:32:22+00:00"
+        },
+        {
+            "name": "bee-framework/util",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Anoxia/bee-util.git",
+                "reference": "dceb0117962de995e92a28ddb94a5c38a58a2876"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Anoxia/bee-util/zipball/dceb0117962de995e92a28ddb94a5c38a58a2876",
+                "reference": "dceb0117962de995e92a28ddb94a5c38a58a2876",
+                "shasum": ""
+            },
+            "require": {
+                "ext-inotify": "*",
+                "ext-phalcon": "^3.2.0"
+            },
+            "require-dev": {
+                "phalcon/ide-stubs": "*",
+                "phpunit/phpunit": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bee\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Bee框架通用类库",
+            "time": "2018-10-11T15:02:17+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "eaglewu/swoole-ide-helper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wudi/swoole-ide-helper.git",
+                "reference": "d5ba04bca84302713dc4ae288dcdf11febb82d35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wudi/swoole-ide-helper/zipball/d5ba04bca84302713dc4ae288dcdf11febb82d35",
+                "reference": "d5ba04bca84302713dc4ae288dcdf11febb82d35",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "eagle",
+                    "email": "eaglewudi@gmail.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "Swoole IDE Helper, to improve auto-completion",
+            "keywords": [
+                "autocomplete",
+                "codeintel",
+                "helper",
+                "ide",
+                "netbeans",
+                "phpdoc",
+                "phpstorm",
+                "sublime",
+                "swoole"
+            ],
+            "time": "2018-10-25T04:44:48+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "eaglewu/swoole-ide-helper": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.1",
+        "ext-inotify": "^2.0.0",
+        "ext-swoole": "^4.1.0",
+        "ext-pcntl": "*",
+        "ext-igbinary": "*"
+    },
+    "platform-dev": []
+}
