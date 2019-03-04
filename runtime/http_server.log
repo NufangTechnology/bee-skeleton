@@ -170,3 +170,5 @@ Stack trace:
   thrown in /vagrant/app/Util/ThrowExceptionHandler.php on line 135
 [2019-03-04 10:21:18 $2477.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
 [2019-03-04 10:22:43 #2476.1]	NOTICE	Server is shutdown now.
+[2019-03-04 10:37:11 #2489.1]	NOTICE	Server is shutdown now.
+[2019-03-04 10:37:22 #2501.1]	NOTICE	Server is shutdown now.

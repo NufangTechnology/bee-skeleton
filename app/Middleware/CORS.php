@@ -22,8 +22,6 @@ class CORS extends Middleware
      */
     public function call(Application $application, Context $context, $parameters = null)
     {
-        echo $data['test'];
-
         $response = $context->getResponse();
         $request  = $context->getRequest();
         // 请求方法

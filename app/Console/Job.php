@@ -1,5 +1,5 @@
 <?php
-namespace Star\Cli;
+namespace Star\Console;
 
 use Bee\Cli\Command;
 use Bee\Di\Container;
@@ -7,7 +7,7 @@ use Bee\Di\Container;
 /**
  * Job
  *
- * @package Star\Cli
+ * @package Star\Console
  */
 class Job extends Command
 {

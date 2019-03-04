@@ -1,5 +1,5 @@
 <?php
-namespace Star\Cli;
+namespace Star\Console;
 
 use Bee\Cli\Command;
 use Bee\Di\Container;
@@ -7,7 +7,7 @@ use Bee\Di\Container;
 /**
  * Http
  *
- * @package Eye\Cli
+ * @package Star\Console
  */
 class Http extends Command
 {

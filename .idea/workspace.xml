@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ccf5d671-b6ca-4b6a-88eb-9a5450522d04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Job/Demo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/skeleton.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/skeleton.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Cli/Worker.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Cli/Job.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Demo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Demo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Middleware/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Middleware/CORS.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/CORS.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Middleware/Dispatch.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/Dispatch.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Middleware/Route.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Middleware/Route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Model/Demo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Model/Demo.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Util/Http.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Util/Http.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Util/HttpServer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Util/HttpServer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Util/ThrowException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Util/ThrowException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Worker/Master.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Job/Master.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Worker/PullLog.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cli.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/cli.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/di.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/di.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/server.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/server.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/worker.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/worker.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/default/20190301.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/http.pid" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/http.pid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runtime/http_server.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/http_server.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/print_r.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/bee-framework/util/src/Exception.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/bee-framework/util/src/Exception.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,21 +61,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Util/ThrowExceptionHandler.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="1079">
+              <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
               <folding>
                 <element signature="e#28#49#0#PHP" expanded="true" />
                 <element signature="e#784#957#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/runtime/default/20190304.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="156">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -232,8 +194,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="611" />
-    <option name="y" value="50" />
+    <option name="x" value="358" />
+    <option name="y" value="36" />
     <option name="width" value="1575" />
     <option name="height" value="1010" />
   </component>
@@ -266,12 +228,6 @@
               <item name="skeleton" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Middleware" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skeleton" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="skeleton" type="b2602c69:ProjectViewProjectNode" />
@@ -383,18 +339,17 @@
       <workItem from="1551345279301" duration="3070000" />
       <workItem from="1551405259184" duration="17883000" />
       <workItem from="1551663596226" duration="11979000" />
-      <workItem from="1551685498924" duration="9699000" />
+      <workItem from="1551685498924" duration="9947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132718000" />
+    <option name="totallyTimeSpent" value="132966000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="611" y="50" width="1575" height="1010" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2074364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2074364" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -703,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/runtime/default/20190304.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Demo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -729,12 +677,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Util/ThrowExceptionHandler.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="1079">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
           <folding>
             <element signature="e#28#49#0#PHP" expanded="true" />
             <element signature="e#784#957#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/default/20190304.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="156">
+          <caret line="6" column="107" selection-start-line="6" selection-start-column="107" selection-end-line="6" selection-end-column="107" />
         </state>
       </provider>
     </entry>

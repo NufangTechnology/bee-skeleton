@@ -7,7 +7,7 @@
 
 // cli组件配置
 $di->setShared('config.cli', function () {
-    return require(CONFIG_PATH . '/cli.php');
+    return require(CONFIG_PATH . '/console.php');
 });
 
 $di->setShared('config.middleware', function () {
