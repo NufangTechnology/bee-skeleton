@@ -1,13 +1,9 @@
 <?php
-namespace Star\Util;
+namespace Bee\Http;
 
-use Bee\Exception;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
-use Bee\RuntimeException;
-use Bee\Http\Context;
 use Bee\Router\Handler as RouteHandler;
-use Bee\Di\Container as Di;
 
 /**
  * Application
@@ -72,9 +68,13 @@ class Application
     }
 
     /**
-     * 服务 reduce
+     * 执行请求业务处理
+     *  - 设置请求超时定时器
+     *  - 执行中间件业务
+     *  - 清除超时定时器
+     *  - 业务处理结束，获取返回值
      */
-    protected function reduce()
+    public function handle()
     {
         $result = null;
 
@@ -87,22 +87,6 @@ class Application
                 break;
             }
         }
-    }
-
-    /**
-     * 执行请求业务处理
-     *  - 设置请求超时定时器
-     *  - 执行中间件业务
-     *  - 清除超时定时器
-     *  - 业务处理结束，获取返回值
-     */
-    public function handle()
-    {
-        try {
-            $this->reduce();
-        } catch (\Throwable $e) {
-
-        }
 
         // 返回响应数据
         $this->response();
@@ -114,8 +98,7 @@ class Application
     public function response()
     {
         // 待发送至客户端数据
-        $content = $this->context->getContent();
-
+        $content  = $this->context->getContent();
 
         // 处理返回内容
         $response = $this->context->getResponse();
@@ -123,45 +106,6 @@ class Application
         $response->setContent($content);
         // 向客户端发送内容并结束请求
         $response->send();
-    }
-
-    /**
-     * @param \Throwable $e
-     */
-    public function collectionException(\Throwable $e)
-    {
-        // 拼接返回至客户端错误信息
-        if ($e instanceof RuntimeException) {
-            $content['result'] = false;
-            $content['code']   = $e->getCode();
-            $content['msg']    = $e->getMessage();
-            $content['info']   = $e->getData();
-        } else {
-            $content['result'] = false;
-            $content['code']   = $e->getCode();
-            $content['msg']    = '服务异常，请稍后重试!';
-        }
-        // 保存至待返回客户端内容
-        $this->context->setContent($content);
-
-        $trace = $e->getTrace();
-        // 拼接 trace 信息
-        $log   = [
-            'name'     => 'app-management',
-            'message'  => $e->getMessage(),
-            'code'     => $e->getCode(),
-            'line'     => $trace[0]['line'] ?? 0,
-            'function' => $trace[0]['function'] ?? '',
-            'class'    => get_class($e),
-            'file'     => $trace[0]['file'] ?? '',
-            'args'     => $trace[0]['args'] ?? [],
-        ];
-        // 异常 trace 信息保存至上下文日志中
-        $this->context->setLog($log);
-
-        // 记录上下文快照至日志
-        $logger = Di::getDefault()->getShared('service.logger');
-        $logger->error($this->context);
     }
 
     /**

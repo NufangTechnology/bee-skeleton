@@ -11,14 +11,12 @@
     ],
     "require": {
         "php": ">=7.1",
-        "bee-framework/di": "dev-master",
-        "bee-framework/http": "dev-master",
-        "bee-framework/cli": "dev-master",
-        "bee-framework/router": "dev-master",
-        "bee-framework/db": "dev-master",
-        "bee-framework/logger": "dev-master",
-        "bee-framework/process": "dev-master",
-        "ext-json": "*"
+        "ext-json": "*",
+        "bee-framework/di": "^1.1",
+        "bee-framework/http": "^1.2",
+        "bee-framework/cli": "^1.0",
+        "bee-framework/db": "^1.1",
+        "bee-framework/logger": "^1.1"
     },
     "autoload": {
         "psr-4": {

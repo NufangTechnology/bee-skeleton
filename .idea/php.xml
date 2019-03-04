@@ -3,17 +3,15 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/swoft/swoole-ide-helper" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/util" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/di" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/http" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/db" />
-      <path value="$PROJECT_DIR$/vendor/adhocore/cli" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/logger" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/cli" />
       <path value="$PROJECT_DIR$/vendor/composer" />
-      <path value="$PROJECT_DIR$/vendor/bee-framework/process" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/di" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/util" />
+      <path value="$PROJECT_DIR$/vendor/adhocore/cli" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/http" />
       <path value="$PROJECT_DIR$/vendor/bee-framework/router" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/cli" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/db" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/logger" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

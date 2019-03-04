@@ -7,9 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Star\\' => array($baseDir . '/app'),
-    'JakubOnderka\\PhpConsoleColor\\' => array($vendorDir . '/jakub-onderka/php-console-color/src'),
     'Bee\\Router\\' => array($vendorDir . '/bee-framework/router/src'),
-    'Bee\\Process\\' => array($vendorDir . '/bee-framework/process/src'),
     'Bee\\Logger\\' => array($vendorDir . '/bee-framework/logger/src'),
     'Bee\\Http\\' => array($vendorDir . '/bee-framework/http/src'),
     'Bee\\Di\\' => array($vendorDir . '/bee-framework/di/src'),

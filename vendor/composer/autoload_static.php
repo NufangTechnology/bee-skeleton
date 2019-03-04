@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd
+class ComposerStaticInitdbf9585cffb3f9979d2dc9aef6e99796
 {
     public static $files = array (
         '57d423752000e8a329035761fa94ebcc' => __DIR__ . '/../..' . '/app/helper.php',
@@ -15,14 +15,9 @@ class ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd
         array (
             'Star\\' => 5,
         ),
-        'J' => 
-        array (
-            'JakubOnderka\\PhpConsoleColor\\' => 29,
-        ),
         'B' => 
         array (
             'Bee\\Router\\' => 11,
-            'Bee\\Process\\' => 12,
             'Bee\\Logger\\' => 11,
             'Bee\\Http\\' => 9,
             'Bee\\Di\\' => 7,
@@ -41,17 +36,9 @@ class ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd
         array (
             0 => __DIR__ . '/../..' . '/app',
         ),
-        'JakubOnderka\\PhpConsoleColor\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
-        ),
         'Bee\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/bee-framework/router/src',
-        ),
-        'Bee\\Process\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/bee-framework/process/src',
         ),
         'Bee\\Logger\\' => 
         array (
@@ -86,8 +73,8 @@ class ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitceb8bd9d27273f4dca18bcb81d9d7cfd::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdbf9585cffb3f9979d2dc9aef6e99796::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdbf9585cffb3f9979d2dc9aef6e99796::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2f2c3f307c22471f18dc0307490c98c",
+    "content-hash": "f035ccc85c1c2ef693adc9e4bdd86bb1",
     "packages": [
         {
             "name": "bee-framework/util",
-            "version": "v2.0.0",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-util.git",
-                "reference": "6515fa029a2b34ed60afb8926bc5d16d1f9b679b"
+                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/6515fa029a2b34ed60afb8926bc5d16d1f9b679b",
-                "reference": "6515fa029a2b34ed60afb8926bc5d16d1f9b679b",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
+                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
                 "shasum": ""
             },
             "require-dev": {
@@ -31,7 +31,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bee框架通用类库",
-            "time": "2019-01-18T02:08:57+00:00"
+            "time": "2019-03-04T03:40:15+00:00"
         }
     ],
     "packages-dev": [
@@ -69,6 +69,10 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.1",
+        "ext-redis": "*",
+        "ext-swoole": ">=4.2"
+    },
     "platform-dev": []
 }

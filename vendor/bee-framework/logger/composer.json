@@ -5,7 +5,7 @@
     "require": {
         "php": ">=7.1",
         "ext-seaslog": ">=1.9",
-        "bee-framework/util": "^2.0"
+        "bee-framework/util": "^2.1"
     },
     "require-dev": {
         "vicens/seaslog-helper": "^0.1.0"

@@ -145,40 +145,4 @@ class Context
     {
         $this->outputJson = $outputJson;
     }
-
-    /**
-     * @return false|string
-     */
-    public function __toString()
-    {
-        $data = json_encode(
-            [
-                'request_uri' => $this->request->getServer('request_uri'),
-                'method'      => $this->request->getServer('request_method'),
-                'headers'      => [
-                    'Host'             => $this->request->getHeader('Host'),
-                    'Content-Type'     => $this->request->getHeader('Content-Type'),
-                    'User-Agent'       => $this->request->getHeader('User-Agent'),
-                    'Referer'          => $this->request->getHeader('Referer'),
-                    'X-Api-Version'    => $this->request->getHeader('X-Api-Version'),
-                    'X-Client-Version' => $this->request->getHeader('X-Client-Version'),
-                    'X-Mini-Version'   => $this->request->getHeader('X-Mini-Version'),
-                    'X-System-Version' => $this->request->getHeader('X-System-Version'),
-                    'X-Token'          => $this->request->getHeader('X-Token'),
-                ],
-                'get'         => $this->request->getQuery(),
-                'body'        => $this->request->getJsonRawBody(),
-                'context'     => $this->content,
-                'data'        => $this->data,
-                'logs'        => $this->logs
-            ],
-            JSON_UNESCAPED_UNICODE
-        );
-
-        if (empty($data)) {
-            $data = 'Context转换为string失败';
-        }
-
-        return $data;
-    }
 }

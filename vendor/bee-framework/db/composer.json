@@ -5,8 +5,8 @@
     "require": {
         "php": ">=7.1",
         "ext-redis": "*",
-        "ext-swoole": "*",
-        "bee-framework/util": "^2.0"
+        "ext-swoole": ">=4.2",
+        "bee-framework/util": "^2.1"
     },
     "require-dev": {
         "swoft/swoole-ide-helper": "^4.2"

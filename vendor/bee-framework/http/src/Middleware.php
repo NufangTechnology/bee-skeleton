@@ -1,7 +1,5 @@
 <?php
-namespace Star\Util;
-
-use Bee\Http\Context;
+namespace Bee\Http;
 
 /**
  * Middleware

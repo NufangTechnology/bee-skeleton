@@ -22,23 +22,17 @@ class Route extends Middleware
      * @param Context $context
      * @param mixed $parameters
      * @return mixed
-     * @throws ThrowException\UrlNotFoundException
+     * @throws ThrowException
      */
     public function call(Application $application, Context $context, $parameters = null)
     {
         $request = $context->getRequest();
         // 请求方法
-        $method   = $request->getMethod();
-
-        // HEAD - 腾讯负载心跳处理
-        if ($method == 'HEAD') {
-            $context->setOutputJson(false);
-            return false;
-        }
-
-        $router  = Container::getDefault()->getShared('router');
+        $method  = $request->getMethod();
         // 获取 URL PATH
         $urlPath = $request->getURI();
+        // 获取router组件
+        $router  = Container::getDefault()->getShared('router');
 
         // 执行路由匹配
         $handler = $router->match($method, $urlPath);

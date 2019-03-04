@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "681795893eb0c873af0910dbc5d45da8",
+    "content-hash": "436b761b488b1d36592b877edb9756cd",
     "packages": [
         {
             "name": "adhocore/cli",
@@ -64,21 +64,20 @@
         },
         {
             "name": "bee-framework/cli",
-            "version": "dev-master",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-cli.git",
-                "reference": "c875d537cffdf40a937ee3b13b3745f618f3364a"
+                "reference": "a2e5eed38cd9496354461827cc0d08fca8abdb8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-cli/zipball/c875d537cffdf40a937ee3b13b3745f618f3364a",
-                "reference": "c875d537cffdf40a937ee3b13b3745f618f3364a",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-cli/zipball/a2e5eed38cd9496354461827cc0d08fca8abdb8e",
+                "reference": "a2e5eed38cd9496354461827cc0d08fca8abdb8e",
                 "shasum": ""
             },
             "require": {
-                "jakub-onderka/php-console-color": "^0.2.0",
-                "php": ">=7.1"
+                "adhocore/cli": "^0.3.2"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7.2"
@@ -91,26 +90,26 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bee框架命令行组件",
-            "time": "2019-02-28T09:37:33+00:00"
+            "time": "2018-12-07T06:41:16+00:00"
         },
         {
             "name": "bee-framework/db",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-db.git",
-                "reference": "a1891bf4759c2694e3135cdf741351ceae5ccb5d"
+                "reference": "97bc64c8e0f291ca6aae38c7db5f8f365f157bc7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-db/zipball/a1891bf4759c2694e3135cdf741351ceae5ccb5d",
-                "reference": "a1891bf4759c2694e3135cdf741351ceae5ccb5d",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-db/zipball/97bc64c8e0f291ca6aae38c7db5f8f365f157bc7",
+                "reference": "97bc64c8e0f291ca6aae38c7db5f8f365f157bc7",
                 "shasum": ""
             },
             "require": {
-                "bee-framework/util": "^2.0",
+                "bee-framework/util": "^2.1",
                 "ext-redis": "*",
-                "ext-swoole": "*",
+                "ext-swoole": ">=4.2",
                 "php": ">=7.1"
             },
             "require-dev": {
@@ -130,24 +129,24 @@
                 }
             ],
             "description": "Bee框架数据库组件",
-            "time": "2019-02-28T09:39:40+00:00"
+            "time": "2019-03-04T06:09:37+00:00"
         },
         {
             "name": "bee-framework/di",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-di.git",
-                "reference": "1dd4183c6569da389d4d13519a4d053be986635a"
+                "reference": "f176bad0d7c9d5746fe4d840f030fb0efb75322b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-di/zipball/1dd4183c6569da389d4d13519a4d053be986635a",
-                "reference": "1dd4183c6569da389d4d13519a4d053be986635a",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-di/zipball/f176bad0d7c9d5746fe4d840f030fb0efb75322b",
+                "reference": "f176bad0d7c9d5746fe4d840f030fb0efb75322b",
                 "shasum": ""
             },
             "require": {
-                "bee-framework/util": "^2.0",
+                "bee-framework/util": "^2.1",
                 "php": ">=7.1"
             },
             "require-dev": {
@@ -170,25 +169,26 @@
                 }
             ],
             "description": "Bee框架d组件",
-            "time": "2019-02-28T09:40:50+00:00"
+            "time": "2019-03-04T04:31:00+00:00"
         },
         {
             "name": "bee-framework/http",
-            "version": "dev-master",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-http.git",
-                "reference": "7ed33e7eefbf32c898ea3913bb1b5b1d04b51a21"
+                "reference": "0d195d855eb410c4f57285fe40abd256e1ee6557"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-http/zipball/7ed33e7eefbf32c898ea3913bb1b5b1d04b51a21",
-                "reference": "7ed33e7eefbf32c898ea3913bb1b5b1d04b51a21",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-http/zipball/0d195d855eb410c4f57285fe40abd256e1ee6557",
+                "reference": "0d195d855eb410c4f57285fe40abd256e1ee6557",
                 "shasum": ""
             },
             "require": {
                 "adhocore/cli": "^0.3.2",
-                "bee-framework/util": "^2.0",
+                "bee-framework/router": "^1.2",
+                "bee-framework/util": "^2.1",
                 "ext-json": "*",
                 "ext-pcntl": "*",
                 "ext-swoole": ">=4.2",
@@ -212,24 +212,24 @@
                 }
             ],
             "description": "Bee框架http组件",
-            "time": "2019-03-01T08:46:02+00:00"
+            "time": "2019-03-04T04:17:55+00:00"
         },
         {
             "name": "bee-framework/logger",
-            "version": "dev-master",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-logger.git",
-                "reference": "f9a35048953e1bf7ad5ef7e6ef7dcede5201a339"
+                "reference": "7dee21ba06a9cf0e2c441e82675acc59d22edb12"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-logger/zipball/f9a35048953e1bf7ad5ef7e6ef7dcede5201a339",
-                "reference": "f9a35048953e1bf7ad5ef7e6ef7dcede5201a339",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-logger/zipball/7dee21ba06a9cf0e2c441e82675acc59d22edb12",
+                "reference": "7dee21ba06a9cf0e2c441e82675acc59d22edb12",
                 "shasum": ""
             },
             "require": {
-                "bee-framework/util": "^2.0",
+                "bee-framework/util": "^2.1",
                 "ext-seaslog": ">=1.9",
                 "php": ">=7.1"
             },
@@ -250,67 +250,25 @@
                 }
             ],
             "description": "Bee框架日志件",
-            "time": "2019-03-01T04:08:59+00:00"
-        },
-        {
-            "name": "bee-framework/process",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/NufangTechnology/bee-process.git",
-                "reference": "8ade8a3b4a962fac14563e1a2335753a578b0dca"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-process/zipball/8ade8a3b4a962fac14563e1a2335753a578b0dca",
-                "reference": "8ade8a3b4a962fac14563e1a2335753a578b0dca",
-                "shasum": ""
-            },
-            "require": {
-                "adhocore/cli": "^0.3.2",
-                "bee-framework/util": "^2.0",
-                "ext-igbinary": "*",
-                "ext-pcntl": "*",
-                "ext-swoole": "^4.1.0",
-                "php": "^7.1"
-            },
-            "require-dev": {
-                "eaglewu/swoole-ide-helper": "master-dev",
-                "phalcon/ide-stubs": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Bee\\Process\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "南山吴彦祖",
-                    "email": "anoxia@engineer.com"
-                }
-            ],
-            "description": "Bee框架进程组件",
-            "time": "2019-02-05T14:02:54+00:00"
+            "time": "2019-03-04T06:14:53+00:00"
         },
         {
             "name": "bee-framework/router",
-            "version": "dev-master",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-router.git",
-                "reference": "0cec711f47e3b1be9167ac5786474b53b679c7db"
+                "reference": "947de767e3aff52e9d43cfd2a7326a527a45a67a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-router/zipball/0cec711f47e3b1be9167ac5786474b53b679c7db",
-                "reference": "0cec711f47e3b1be9167ac5786474b53b679c7db",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-router/zipball/947de767e3aff52e9d43cfd2a7326a527a45a67a",
+                "reference": "947de767e3aff52e9d43cfd2a7326a527a45a67a",
                 "shasum": ""
             },
             "require": {
-                "bee-framework/util": "^2.0",
-                "php": "^7.2.0"
+                "bee-framework/util": "^2.1",
+                "php": ">=7.1"
             },
             "type": "library",
             "autoload": {
@@ -329,20 +287,20 @@
                 }
             ],
             "description": "Bee框架路由组件",
-            "time": "2019-01-19T09:40:02+00:00"
+            "time": "2019-03-04T04:10:02+00:00"
         },
         {
             "name": "bee-framework/util",
-            "version": "v2.0.1",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-util.git",
-                "reference": "91c076d7df05bb7cdbd7c5b1b35af4c33f85704b"
+                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/91c076d7df05bb7cdbd7c5b1b35af4c33f85704b",
-                "reference": "91c076d7df05bb7cdbd7c5b1b35af4c33f85704b",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
+                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
                 "shasum": ""
             },
             "require-dev": {
@@ -356,49 +314,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bee框架通用类库",
-            "time": "2019-01-19T12:50:30+00:00"
-        },
-        {
-            "name": "jakub-onderka/php-console-color",
-            "version": "v0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JakubOnderka/PHP-Console-Color.git",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JakubOnderka/PHP-Console-Color/zipball/d5deaecff52a0d61ccb613bb3804088da0307191",
-                "reference": "d5deaecff52a0d61ccb613bb3804088da0307191",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "jakub-onderka/php-code-style": "1.0",
-                "jakub-onderka/php-parallel-lint": "1.0",
-                "jakub-onderka/php-var-dump-check": "0.*",
-                "phpunit/phpunit": "~4.3",
-                "squizlabs/php_codesniffer": "1.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "JakubOnderka\\PhpConsoleColor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Jakub Onderka",
-                    "email": "jakub.onderka@gmail.com"
-                }
-            ],
-            "time": "2018-09-29T17:23:10+00:00"
+            "time": "2019-03-04T03:40:15+00:00"
         }
     ],
     "packages-dev": [
@@ -433,15 +349,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "bee-framework/di": 20,
-        "bee-framework/http": 20,
-        "bee-framework/cli": 20,
-        "bee-framework/router": 20,
-        "bee-framework/db": 20,
-        "bee-framework/logger": 20,
-        "bee-framework/process": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
