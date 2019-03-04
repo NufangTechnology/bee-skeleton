@@ -13,5 +13,5 @@ class Demo extends Model
     /**
      * @var string
      */
-    protected $table = 'api_error_log';
+    protected $table = 'table_name';
 }

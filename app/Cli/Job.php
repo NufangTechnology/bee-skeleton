@@ -5,11 +5,11 @@ use Bee\Cli\Command;
 use Bee\Di\Container;
 
 /**
- * Worker
+ * Job
  *
  * @package Star\Cli
  */
-class Worker extends Command
+class Job extends Command
 {
     /**
      * 命令名称

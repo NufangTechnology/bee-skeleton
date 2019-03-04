@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "436b761b488b1d36592b877edb9756cd",
+    "content-hash": "e126ed1b290db565520ab9ee2181cdc2",
     "packages": [
         {
             "name": "adhocore/cli",
@@ -253,6 +253,47 @@
             "time": "2019-03-04T06:14:53+00:00"
         },
         {
+            "name": "bee-framework/process",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NufangTechnology/bee-process.git",
+                "reference": "ad5f774f5db114548cb7c5392454b4f78d82862b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-process/zipball/ad5f774f5db114548cb7c5392454b4f78d82862b",
+                "reference": "ad5f774f5db114548cb7c5392454b4f78d82862b",
+                "shasum": ""
+            },
+            "require": {
+                "adhocore/cli": "^0.3.2",
+                "bee-framework/util": "^2.1",
+                "ext-pcntl": "*",
+                "ext-swoole": ">=4.2.0",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "eaglewu/swoole-ide-helper": "master-dev",
+                "phalcon/ide-stubs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Bee\\Process\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "南山吴彦祖",
+                    "email": "anoxia@engineer.com"
+                }
+            ],
+            "description": "Bee框架进程组件",
+            "time": "2019-03-04T07:18:35+00:00"
+        },
+        {
             "name": "bee-framework/router",
             "version": "v1.2.0",
             "source": {
@@ -291,16 +332,16 @@
         },
         {
             "name": "bee-framework/util",
-            "version": "v2.1.0",
+            "version": "v2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-util.git",
-                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9"
+                "reference": "c16f4b14b05e80d284438b3abcbbe2bcc71aa964"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
-                "reference": "eecc69eb0f4b87511544dd54b79fbb2fec38c1d9",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/c16f4b14b05e80d284438b3abcbbe2bcc71aa964",
+                "reference": "c16f4b14b05e80d284438b3abcbbe2bcc71aa964",
                 "shasum": ""
             },
             "require-dev": {
@@ -314,7 +355,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bee框架通用类库",
-            "time": "2019-03-04T03:40:15+00:00"
+            "time": "2019-03-04T09:43:54+00:00"
         }
     ],
     "packages-dev": [

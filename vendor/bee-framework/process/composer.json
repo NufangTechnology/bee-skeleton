@@ -1,0 +1,32 @@
+{
+    "name": "bee-framework/process",
+    "description": "Bee框架进程组件",
+    "type": "library",
+    "authors": [
+        {
+            "name": "南山吴彦祖",
+            "email": "anoxia@engineer.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "adhocore/cli": "^0.3.2",
+        "ext-swoole": ">=4.2.0",
+        "ext-pcntl": "*",
+        "bee-framework/util": "^2.1"
+    },
+    "require-dev": {
+        "phalcon/ide-stubs": "*",
+        "eaglewu/swoole-ide-helper": "master-dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bee\\Process\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bee\\Process\\Tests\\": "tests/"
+        }
+    }
+}

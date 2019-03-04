@@ -2,9 +2,10 @@
 namespace Star\Middleware;
 
 use Bee\Exception;
-use Star\Util\Middleware;
-use Star\Util\Application;
+use Bee\Http\Application;
+use Bee\Http\Middleware;
 use Bee\Http\Context;
+use Star\Util\ThrowExceptionHandler;
 
 /**
  * 路由请求派发中间件
@@ -29,31 +30,16 @@ class Dispatch extends Middleware
         try {
             // 执行业务
             $returnValue = $routeHandler->callMethod($application, $parameters);
-
-            // 返回数据为数组，拼接成约定格式
-            if (is_array($returnValue)) {
-                $returnValue = [
-                    'result' => true,
-                    'info'   => $returnValue,
-                ];
+            // 检查是否需要 json 序列化
+            if ($context->isOutputJson()) {
+                $returnValue = json_encode($returnValue);
             }
         } catch (Exception $e) {
-            // 拼接一场时返回的数据
-            $returnValue = [
-                'result' => false,
-                'code'   => $e->getCode(),
-                'msg'    => $e->getMessage(),
-            ];
+            // 收集异常信息并记录日志
+            $returnValue = ThrowExceptionHandler::http($e, $context);
 
-            // 收集运行异常信息
-            $context->setLog($e->toArray());
             // 终止请求往下传递
             $continue = false;
-        }
-
-        // 检查是否需要 json 序列化
-        if ($context->isOutputJson()) {
-            $returnValue = json_encode($returnValue);
         }
 
         // 将返回值注入上下文

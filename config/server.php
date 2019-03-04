@@ -2,9 +2,9 @@
 return [
     // http服务配置
     'http' => [
-        'name'   => 'app-manage-http',
+        'name'   => 'bee-http',
         'host'   => '0.0.0.0',
-        'port'   => 8002,
+        'port'   => 8000,
         'option' => [
             'pid_file'              => RUNTIME_PATH . '/http.pid',
             'log_file'              => RUNTIME_PATH . '/http_server.log',
@@ -21,7 +21,7 @@ return [
 
     // 定时器配置
     'worker' => [
-        'name'     => 'app-manage-worker',
+        'name'     => 'bee-worker',
         'pidFile'  => RUNTIME_PATH . '/worker.pid',
         'daemon'   => true,
         'redirect' => false

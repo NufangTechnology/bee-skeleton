@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/di" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/http" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/logger" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/process" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/router" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bee-framework/util" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />

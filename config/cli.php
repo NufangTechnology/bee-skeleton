@@ -7,6 +7,6 @@ return [
         'class' => \Star\Cli\Http::class
     ],
     [
-        'class' => \Star\Cli\Worker::class
+        'class' => \Star\Cli\Job::class
     ]
 ];

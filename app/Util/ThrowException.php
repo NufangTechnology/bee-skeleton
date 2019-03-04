@@ -6,7 +6,7 @@ namespace Star\Util;
  *
  * @package Eye\Util
  */
-class ThrowException extends \Bee\RuntimeException
+class ThrowException extends \Bee\Exception
 {
     /**
      * 服务不可用

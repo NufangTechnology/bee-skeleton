@@ -3,9 +3,9 @@ namespace Star\Middleware;
 
 use Bee\Di\Container;
 use Bee\Http\Context;
+use Bee\Http\Application;
+use Bee\Http\Middleware;
 use Bee\Router\Handler as RouteHandler;
-use Star\Util\Middleware;
-use Star\Util\Application;
 use Star\Util\ThrowException;
 
 /**

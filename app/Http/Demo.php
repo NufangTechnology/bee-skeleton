@@ -9,4 +9,16 @@ use Star\Util\Http;
  * @package Star\Http
  */
 class Demo extends Http
-{}
+{
+    public function say()
+    {
+        throw new \Exception('hello word');
+
+        return 'hello word';
+    }
+
+    public function upload()
+    {
+        return 'upload';
+    }
+}

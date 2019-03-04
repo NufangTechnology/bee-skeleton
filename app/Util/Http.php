@@ -1,6 +1,7 @@
 <?php
 namespace Star\Util;
 
+use Bee\Http\Application;
 use Bee\Http\Context;
 use Bee\Http\Request;
 use Bee\Http\Response;

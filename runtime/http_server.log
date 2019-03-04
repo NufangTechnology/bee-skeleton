@@ -129,3 +129,44 @@ PHP Warning:  var_export does not handle circular references in /vagrant/app/hel
 PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
 PHP Warning:  var_export does not handle circular references in /vagrant/app/helper.php on line 5
 [2019-03-01 09:19:18 #11476.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:01:07 #2197.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:02:28 #2223.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:34:42 #2237.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:35:10 #2251.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:36:21 #2264.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:36:47 #2277.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:48:36 #2290.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:49:07 #2303.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:50:51 #2315.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:52:22 #2327.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:54:04 #2339.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:55:20 #2351.0]	WARNING	swPort_onRead_http: Content-Length is too big, MaxSize=[2096804].
+[2019-03-04 08:56:38 #2351.1]	NOTICE	Server is shutdown now.
+[2019-03-04 08:58:06 #2363.1]	NOTICE	Server is shutdown now.
+[2019-03-04 10:13:33 #2375.1]	NOTICE	Server is shutdown now.
+PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /vagrant/app/Util/ThrowExceptionHandler.php:130
+Stack trace:
+#0 /vagrant/app/Util/ThrowExceptionHandler.php(117): Star\Util\ThrowExceptionHandler::report('critical', Array)
+#1 /vagrant/app/Util/HttpServer.php(87): Star\Util\ThrowExceptionHandler::uncaught(Object(Error))
+#2 {main}
+  thrown in /vagrant/app/Util/ThrowExceptionHandler.php on line 130
+[2019-03-04 10:13:41 $2427.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-03-04 10:14:10 #2426.1]	NOTICE	Server is shutdown now.
+[2019-03-04 10:14:17 #2439.1]	NOTICE	Server is shutdown now.
+PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /vagrant/app/Util/ThrowExceptionHandler.php:130
+Stack trace:
+#0 /vagrant/app/Util/ThrowExceptionHandler.php(117): Star\Util\ThrowExceptionHandler::report('critical', Array)
+#1 /vagrant/app/Util/HttpServer.php(87): Star\Util\ThrowExceptionHandler::uncaught(Object(Error))
+#2 {main}
+  thrown in /vagrant/app/Util/ThrowExceptionHandler.php on line 130
+[2019-03-04 10:14:21 $2452.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-03-04 10:15:51 #2451.1]	NOTICE	Server is shutdown now.
+[2019-03-04 10:21:15 #2464.1]	NOTICE	Server is shutdown now.
+PHP Fatal error:  Uncaught Error: Call to a member function log() on null in /vagrant/app/Util/ThrowExceptionHandler.php:135
+Stack trace:
+#0 /vagrant/app/Util/ThrowExceptionHandler.php(118): Star\Util\ThrowExceptionHandler::report('critical', Array)
+#1 /vagrant/app/Util/HttpServer.php(87): Star\Util\ThrowExceptionHandler::uncaught(Object(Error))
+#2 {main}
+  thrown in /vagrant/app/Util/ThrowExceptionHandler.php on line 135
+[2019-03-04 10:21:18 $2477.0]	WARNING	swManager_check_exit_status: worker#0 abnormal exit, status=255, signal=0
+[2019-03-04 10:22:43 #2476.1]	NOTICE	Server is shutdown now.

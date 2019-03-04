@@ -1,12 +1,12 @@
 <?php
-namespace Star\Worker;
+namespace Star\Job;
 
 use Bee\Di\Container as Di;
 
 /**
  * 多进程管理器
  *
- * @package Star\Worker
+ * @package Star\Job
  */
 class Master extends \Bee\Process\Master
 {

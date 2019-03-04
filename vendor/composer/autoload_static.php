@@ -18,6 +18,7 @@ class ComposerStaticInitdbf9585cffb3f9979d2dc9aef6e99796
         'B' => 
         array (
             'Bee\\Router\\' => 11,
+            'Bee\\Process\\' => 12,
             'Bee\\Logger\\' => 11,
             'Bee\\Http\\' => 9,
             'Bee\\Di\\' => 7,
@@ -39,6 +40,10 @@ class ComposerStaticInitdbf9585cffb3f9979d2dc9aef6e99796
         'Bee\\Router\\' => 
         array (
             0 => __DIR__ . '/..' . '/bee-framework/router/src',
+        ),
+        'Bee\\Process\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/bee-framework/process/src',
         ),
         'Bee\\Logger\\' => 
         array (

@@ -16,7 +16,8 @@
         "bee-framework/http": "^1.2",
         "bee-framework/cli": "^1.0",
         "bee-framework/db": "^1.1",
-        "bee-framework/logger": "^1.1"
+        "bee-framework/logger": "^1.1",
+        "bee-framework/process": "^1.1"
     },
     "autoload": {
         "psr-4": {

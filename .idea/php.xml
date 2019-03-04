@@ -12,6 +12,7 @@
       <path value="$PROJECT_DIR$/vendor/bee-framework/cli" />
       <path value="$PROJECT_DIR$/vendor/bee-framework/db" />
       <path value="$PROJECT_DIR$/vendor/bee-framework/logger" />
+      <path value="$PROJECT_DIR$/vendor/bee-framework/process" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

@@ -56,5 +56,5 @@ $di->setShared('config.worker', function () {
 // 注入多进程 worker程服务
 $di->setShared('service.worker', function () use ($di) {
     $config = $di->getShared('config.server');
-    return new \Star\Worker\Master($config['worker']);
+    return new \Star\Job\Master($config['worker']);
 });

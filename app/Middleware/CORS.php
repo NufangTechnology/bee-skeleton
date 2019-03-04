@@ -2,8 +2,8 @@
 namespace Star\Middleware;
 
 use Bee\Http\Context;
-use Star\Util\Application;
-use Star\Util\Middleware;
+use Bee\Http\Application;
+use Bee\Http\Middleware;
 
 /**
  * 跨域处理中间件

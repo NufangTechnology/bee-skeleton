@@ -2,6 +2,8 @@
 namespace Star\Util;
 
 use Bee\Di\Container as Di;
+use Bee\Error\Notice;
+use Bee\Http\Application;
 use Bee\Http\Server;
 use Bee\Router\Router;
 use Swoole\Http\Request;
@@ -40,23 +42,11 @@ class HttpServer extends Server
             swoole_set_process_name($this->name . ':worker');
         }
 
-        // 注册错误处理方法
-        register_shutdown_function(function () {
-//            PR('register_shutdown_function');
-        });
-
         $di     = Di::getDefault();
 
         // 错误处理方法
         set_error_handler(function ($code, $message, $file, $line, $callStack) use ($di) {
-//            PR('set_error_handler');
-            PR(func_get_args());
-//            PR(debug_backtrace());
-
-            $notice = new Notice();
-
-            $di->getShared('service.logger')->error($message);
-
+            ThrowExceptionHandler::error(new Notice($message, $code, $line, $file));
         }, E_ALL);
 
         $router = new Router();
@@ -76,8 +66,6 @@ class HttpServer extends Server
      */
     public function onWorkerStop(SwooleHttpServer $server, $workerId)
     {
-//        PR('onWorkerStop');
-//        PR($server);
     }
 
     /**
@@ -96,7 +84,7 @@ class HttpServer extends Server
                 ->handle()
             ;
         } catch (\Throwable $e) {
-            $response->end($e->getMessage());
+            $response->end(ThrowExceptionHandler::uncaught($e));
         }
     }
 
@@ -127,13 +115,9 @@ class HttpServer extends Server
      * @param integer $workerPid
      * @param integer $exitCode
      * @param integer $signal
-     *
-     * @return mixed
      */
     public function onWorkerError(SwooleHttpServer $server, $workerId, $workerPid, $exitCode, $signal)
     {
-//        PR('onWorkerError');
-//        PR(func_get_args());
     }
 
     /**
@@ -143,11 +127,9 @@ class HttpServer extends Server
      *  - onManagerStart回调时，Task和Worker进程已创建
      *
      * @param SwooleHttpServer $server
-     * @return mixed
      */
     public function onManagerStart(SwooleHttpServer $server)
     {
-        // TODO: Implement onManagerStart() method.
     }
 
     /**
@@ -155,10 +137,8 @@ class HttpServer extends Server
      *  - onManagerStop触发时，说明Task和Worker进程已结束运行，已被Manager进程回收。
      *
      * @param SwooleHttpServer $server
-     * @return mixed
      */
     public function onManagerStop(SwooleHttpServer $server)
     {
-        // TODO: Implement onManagerStop() method.
     }
 }

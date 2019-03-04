@@ -50,11 +50,11 @@ class Exception extends \Exception
     }
 
     /**
-     * @return array
+     * @return mixed
      */
-    public function getArgs(): array
+    public function getRuntime()
     {
-        return $this->args;
+        return $this->runtime;
     }
 
     /**
@@ -81,6 +81,7 @@ class Exception extends \Exception
             'line'    => $trace[0]['line'] ?? 0,
             'file'    => $trace[0]['file'] ?? '',
             'args'    => $trace[0] ?? [],
+            'data'    => $this->data,
             'runtime' => $this->runtime,
         ];
     }
