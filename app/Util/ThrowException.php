@@ -13,12 +13,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function unavailable(array $status = Status::E_500000, array $data = [], array $args = [])
+    public static function unavailable(array $status = Status::E_500000, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -26,12 +26,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function urlNotFound(array $status = Status::E_404000, array $data = [], array $args = [])
+    public static function urlNotFound(array $status = Status::E_404000, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -39,12 +39,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function resourceNotFound(array $status = Status::E_404001, array $data = [], array $args = [])
+    public static function resourceNotFound(array $status = Status::E_404001, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -52,12 +52,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function clientParamInvalid(array $status = Status::E_400000, array $data = [], array $args = [])
+    public static function clientParamInvalid(array $status = Status::E_400000, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -65,12 +65,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function dbDeleteFailed(array $status, array $data = [], array $args = [])
+    public static function dbDeleteFailed(array $status, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -78,12 +78,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function dbInsertFailed(array $status = Status::E_500001, array $data = [], array $args = [])
+    public static function dbInsertFailed(array $status = Status::E_500001, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -91,12 +91,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function dbUpdateFailed(array $status, array $data = [], array $args = [])
+    public static function dbUpdateFailed(array $status, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -104,12 +104,12 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function unauthorized(array $status = Status::E_401002, array $data = [], array $args = [])
+    public static function unauthorized(array $status = Status::E_401002, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 
     /**
@@ -117,11 +117,11 @@ class ThrowException extends \Bee\Exception
      *
      * @param array $status
      * @param array $data
-     * @param array $args
+     * @param array $runtime
      * @throws ThrowException
      */
-    public static function authFailed(array $status = Status::E_500000, array $data = [], array $args = [])
+    public static function authFailed(array $status = Status::E_500000, array $data = [], $runtime = null)
     {
-        throw new self($status[1], $status[0], $data, $args);
+        throw new self($status[1], $status[0], $data, $runtime);
     }
 }
