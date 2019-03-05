@@ -6,7 +6,7 @@
  */
 
 // cli组件配置
-$di->setShared('config.cli', function () {
+$di->setShared('config.console', function () {
     return require(CONFIG_PATH . '/console.php');
 });
 

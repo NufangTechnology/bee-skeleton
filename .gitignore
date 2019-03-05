@@ -6,4 +6,3 @@ Vagrantfile
 runtime/
 vendor/
 !runtime/*php
-.vagrant

@@ -61,7 +61,7 @@ try {
     require(CONFIG_PATH . '/di.php');
 
     // 应用启动
-    (new \Bee\Cli\Console($di->getShared('config.cli')))->launch($_SERVER['argv']);
+    (new \Bee\Cli\Console($di->getShared('config.console')))->launch($_SERVER['argv']);
 
 } catch (\Throwable $e) {
     print_r($e);

@@ -1,3 +1,5 @@
+## Seaslog配置
+
 ```ini
 [SeasLog]
 extension = seaslog.so
