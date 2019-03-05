@@ -5,6 +5,7 @@ use Bee\Exception;
 use Bee\Http\Application;
 use Bee\Http\Middleware;
 use Bee\Http\Context;
+use Star\Util\ThrowException;
 use Star\Util\ThrowExceptionHandler;
 
 /**
@@ -34,7 +35,7 @@ class Dispatch extends Middleware
             if ($context->isOutputJson()) {
                 $returnValue = json_encode($returnValue);
             }
-        } catch (Exception $e) {
+        } catch (ThrowException $e) {
             // 收集异常信息并记录日志
             $returnValue = ThrowExceptionHandler::http($e, $context);
 

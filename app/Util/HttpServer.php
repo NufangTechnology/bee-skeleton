@@ -90,7 +90,7 @@ class HttpServer extends Server
 
             try {
                 $app->map($this->container->getShared('config.middleware'))->handle();
-            } catch (\Bee\Exception $e) {
+            } catch (ThrowException $e) {
                 $response->end(ThrowExceptionHandler::http($e, $app->getContext()));
             }
 
