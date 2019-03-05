@@ -1,5 +1,0 @@
-.*
-!.gitignore
-nbproject/
-Vagrantfile
-vendor/

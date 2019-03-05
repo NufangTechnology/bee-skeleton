@@ -1,1 +1,0 @@
-2019-03-04 18:37:28 | notice | 2512 | 5c7cffe2e3018 | 1551695848.625 | {"message":"Undefined variable: data","code":8,"line":25,"class":"Bee\\Error\\Notice","file":"\/vagrant\/app\/Middleware\/CORS.php","args":[],"type":"error"}
