@@ -1,0 +1,9 @@
+.*
+*.log
+!.gitignore
+nbproject/
+Vagrantfile
+runtime/
+vendor/
+!runtime/*php
+.vagrant
