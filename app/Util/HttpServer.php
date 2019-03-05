@@ -1,7 +1,7 @@
 <?php
 namespace Star\Util;
 
-use Bee\Di\Container as Di;
+use Bee\Di\Container;
 use Bee\Error\Notice;
 use Bee\Http\Application;
 use Bee\Http\Server;
@@ -18,6 +18,11 @@ use Swoole\Server\Task as SwooleTask;
  */
 class HttpServer extends Server
 {
+    /**
+     * @var Container
+     */
+    private $container;
+
     /**
      * Server启动在主进程的主线程回调此方法
      *
@@ -42,19 +47,22 @@ class HttpServer extends Server
             swoole_set_process_name($this->name . ':worker');
         }
 
-        $di     = Di::getDefault();
-
         // 错误处理方法
-        set_error_handler(function ($code, $message, $file, $line, $callStack) use ($di) {
+        set_error_handler(function ($code, $message, $file, $line, $callStack) {
             ThrowExceptionHandler::error(new Notice($message, $code, $line, $file));
         }, E_ALL);
 
-        $router = new Router();
+        // 路由处理
+        $router    = new Router();
         // 挂载路由
         $router->map(require(CONFIG_PATH . '/routes.php'));
 
-        $di->setShared('router', $router);
-        $di->setShared('server', $server);
+        // 路由与 server 注入容器全局共享
+        $container = Container::getDefault();
+        $container->setShared('router', $router);
+        $container->setShared('server', $server);
+
+        $this->container = $container;
     }
 
     /**
@@ -77,12 +85,15 @@ class HttpServer extends Server
     public function onRequest(Request $request, Response $response)
     {
         try {
-            $di = Di::getDefault();
+            // 创建请求实例对象
+            $app = new Application($request, $response);
 
-            (new Application($request, $response))
-                ->map($di->getShared('config.middleware'))
-                ->handle()
-            ;
+            try {
+                $app->map($this->container->getShared('config.middleware'))->handle();
+            } catch (\Bee\Exception $e) {
+                $response->end(ThrowExceptionHandler::http($e, $app->getContext()));
+            }
+
         } catch (\Throwable $e) {
             $response->end(ThrowExceptionHandler::uncaught($e));
         }
