@@ -117,7 +117,7 @@ class ThrowExceptionHandler
 
         self::report('critical', $data);
 
-        return '{"content":{"result":false,"code":500000,"msg":"服务异常，请稍后重试!"}}';
+        return '{"result":false,"code":500000,"msg":"服务异常，请稍后重试"}';
     }
 
     /**

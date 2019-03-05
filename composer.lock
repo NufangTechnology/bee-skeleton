@@ -332,16 +332,16 @@
         },
         {
             "name": "bee-framework/util",
-            "version": "v2.1.1",
+            "version": "v2.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-util.git",
-                "reference": "c16f4b14b05e80d284438b3abcbbe2bcc71aa964"
+                "reference": "9e6178a0bb522866c5cdc566cd54d63196e74a54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/c16f4b14b05e80d284438b3abcbbe2bcc71aa964",
-                "reference": "c16f4b14b05e80d284438b3abcbbe2bcc71aa964",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-util/zipball/9e6178a0bb522866c5cdc566cd54d63196e74a54",
+                "reference": "9e6178a0bb522866c5cdc566cd54d63196e74a54",
                 "shasum": ""
             },
             "require-dev": {
@@ -355,7 +355,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "Bee框架通用类库",
-            "time": "2019-03-04T09:43:54+00:00"
+            "time": "2019-03-05T09:06:50+00:00"
         }
     ],
     "packages-dev": [
