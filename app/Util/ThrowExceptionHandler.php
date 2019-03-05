@@ -106,7 +106,7 @@ class ThrowExceptionHandler
         $trace = $throwable->getTrace();
 
         $data  = [
-            'type' => 'uncaught',
+            'type'    => 'uncaught',
             'message' => $throwable->getMessage(),
             'code'    => $throwable->getCode(),
             'line'    => $throwable->getLine(),
