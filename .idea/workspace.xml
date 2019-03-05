@@ -16,13 +16,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Util/ThrowExceptionHandler.php">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="556">
-              <caret line="132" column="8" selection-start-line="132" selection-start-column="8" selection-end-line="132" selection-end-column="8" />
-              <folding>
-                <element signature="e#28#49#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="390">
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -42,8 +39,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Util/Throwable/DbInsertFailedException.php" />
-        <option value="$PROJECT_DIR$/src/Util/Throwable/DisableException.php" />
         <option value="$PROJECT_DIR$/src/Util/Exception.php" />
         <option value="$PROJECT_DIR$/src/Util/ThrowError.php" />
         <option value="$PROJECT_DIR$/src/Util/Log.php" />
@@ -93,6 +88,8 @@
         <option value="$PROJECT_DIR$/app/Console/Job.php" />
         <option value="$PROJECT_DIR$/app/Console/Http.php" />
         <option value="$PROJECT_DIR$/config/cli.php" />
+        <option value="$PROJECT_DIR$/build.db.dev-w.php" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -123,8 +120,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="358" />
-    <option name="y" value="36" />
+    <option name="x" value="347" />
+    <option name="y" value="70" />
     <option name="width" value="1575" />
     <option name="height" value="1010" />
   </component>
@@ -139,17 +136,6 @@
             <path>
               <item name="skeleton" type="b2602c69:ProjectViewProjectNode" />
               <item name="skeleton" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skeleton" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skeleton" type="b2602c69:ProjectViewProjectNode" />
-              <item name="skeleton" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Util" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -247,15 +233,16 @@
       <workItem from="1551405259184" duration="17883000" />
       <workItem from="1551663596226" duration="11979000" />
       <workItem from="1551685498924" duration="10505000" />
-      <workItem from="1551750141130" duration="490000" />
+      <workItem from="1551750141130" duration="1141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134014000" />
+    <option name="totallyTimeSpent" value="134665000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="358" y="36" width="1575" height="1010" extended-state="0" />
+    <frame x="347" y="70" width="1575" height="1010" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19243313" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -293,8 +280,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Util/Throwable/UnauthorizedException.php" />
-    <entry file="file://$PROJECT_DIR$/app/Util/Throwable/UrlNotFoundException.php" />
     <entry file="file://$PROJECT_DIR$/app/Middleware/HttpLog.php" />
     <entry file="file://$PROJECT_DIR$/app/Util/LogCollector.php" />
     <entry file="file://$PROJECT_DIR$/app/Middleware/MQLog.php" />
@@ -591,6 +576,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build.db.dev-w.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Util/ThrowExceptionHandler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
@@ -598,6 +590,13 @@
           <folding>
             <element signature="e#28#49#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
         </state>
       </provider>
     </entry>
