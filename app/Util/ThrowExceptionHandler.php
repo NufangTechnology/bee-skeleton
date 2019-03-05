@@ -49,7 +49,8 @@ class ThrowExceptionHandler
                 'code'   => $e->getCode(),
                 'msg'    => $e->getMessage(),
                 'info'   => $e->getData(),
-            ]
+            ],
+            JSON_UNESCAPED_UNICODE
         );
     }
 
