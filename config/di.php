@@ -49,12 +49,12 @@ $di->setShared('service.http', function () use ($di) {
 });
 
 // 多进程 worker 配置
-$di->setShared('config.worker', function () {
-    return require(CONFIG_PATH . '/worker.php');
+$di->setShared('config.job', function () {
+    return require(CONFIG_PATH . '/job.php');
 });
 
 // 注入多进程 worker程服务
-$di->setShared('service.worker', function () use ($di) {
+$di->setShared('service.job', function () use ($di) {
     $config = $di->getShared('config.server');
-    return new \Star\Job\Master($config['worker']);
+    return new \Star\Job\Master($config['job']);
 });

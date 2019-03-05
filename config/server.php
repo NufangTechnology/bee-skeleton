@@ -20,9 +20,9 @@ return [
     ],
 
     // 定时器配置
-    'worker' => [
-        'name'     => 'bee-worker',
-        'pidFile'  => RUNTIME_PATH . '/worker.pid',
+    'job' => [
+        'name'     => 'bee-job',
+        'pidFile'  => RUNTIME_PATH . '/job.pid',
         'daemon'   => true,
         'redirect' => false
     ],
