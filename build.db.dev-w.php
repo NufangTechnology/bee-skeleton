@@ -10,6 +10,7 @@ return [
             'timeout'     => 0.5,       //数据库连接超时时间
             'charset'     => 'utf8mb4', //默认字符集
             'pool_size'   => 16,  // 连接池连接数量
+            'strict_type' => false,  // 严格模式，返回的字段将自动转为数字类型
         ],
         'slave'  => [
             'host'        => 'slave_node',   //数据库ip
@@ -20,6 +21,7 @@ return [
             'timeout'     => 0.5,       //数据库连接超时时间
             'charset'     => 'utf8mb4', //默认字符集
             'pool_size'   => 16,  // 连接池连接数量
+            'strict_type' => false,  // 严格模式，返回的字段将自动转为数字类型
         ]
     ],
 
