@@ -30,6 +30,7 @@ class CORS extends Middleware
         // HEAD - 腾讯负载心跳处理
         if ($method == 'HEAD') {
             $context->setOutputJson(false);
+            $context->setContent('');
             return false;
         }
 
@@ -42,6 +43,7 @@ class CORS extends Middleware
 
         if ($request->getMethod() == 'OPTIONS') {
             $context->setOutputJson(false);
+            $context->setContent('');
             return false;
         }
 
