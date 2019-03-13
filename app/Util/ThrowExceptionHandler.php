@@ -19,6 +19,11 @@ class ThrowExceptionHandler
     static public $logger;
 
     /**
+     * @var string
+     */
+    static public $appName = '';
+
+    /**
      * http 接口请求异常记录
      *
      * @param Exception $e
@@ -130,9 +135,18 @@ class ThrowExceptionHandler
     public static function report(string $level, array $data)
     {
         if (empty(self::$logger)) {
-            self::$logger = Container::getDefault()->getShared('service.logger');
+            $di            = Container::getDefault();
+            // 获取服务配置
+            $server        = $di->getShared('config.server');
+
+            self::$appName = $server['app_name'];
+            self::$logger  = $di->getShared('service.logger');
         }
 
+        // 拼接应用名称
+        $data['app_name']  = self::$appName;
+
+        // 执行日志记录
         self::$logger->log($level, json_encode($data, JSON_UNESCAPED_UNICODE));
     }
 }
