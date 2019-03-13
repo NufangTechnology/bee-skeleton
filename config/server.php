@@ -1,8 +1,5 @@
 <?php
 return [
-    // 应用名称
-    'app_name' => 'BEE',
-
     // http服务配置
     'http' => [
         'name'   => 'bee-http',
