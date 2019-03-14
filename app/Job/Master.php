@@ -18,10 +18,8 @@ class Master extends \Bee\Process\Master
         // 获取 worker 配置
         $workers = Di::getDefault()->getShared('config.worker');
         foreach ($workers as $worker) {
-            // worker实例化
-            $class = new $worker['class'];
             // 创建子进程
-            $this->fork([$class, 'handle'], $worker['name']);
+            $this->fork(new $worker['class'], $worker['name']);
         }
     }
 }
