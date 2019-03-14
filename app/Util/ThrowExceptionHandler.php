@@ -19,11 +19,6 @@ class ThrowExceptionHandler
     static public $logger;
 
     /**
-     * @var string
-     */
-    static public $appName = '';
-
-    /**
      * http 接口请求异常记录
      *
      * @param Exception $e
@@ -32,18 +27,11 @@ class ThrowExceptionHandler
      */
     public static function http(Exception $e, Context $context): string
     {
-        $request             = $context->getRequest();
-
-        $data                = $e->toArray();
+        // 合并异常与上下文数据
+        // http 异常日志提取时需要上下文请求信息
+        $data         = array_merge($e->toArray(), $context->toArray());
         // 拼接其他日志数据
-        $data['type']        = 'http';
-        $data['request_uri'] = $request->getServer('request_uri');
-        $data['method']      = $request->getServer('request_method');
-        $data['headers']     = $request->getHeader();
-        $data['get']         = $request->getQuery();
-        $data['body']        = $request->hasFiles() ? null : $request->getRawBody();
-        $data['content']     = $context->getContent();
-        $data['data']        = $context->getData();
+        $data['type'] = 'http';
 
         // 记录日异常志数据
         self::report($e->getLevel(), $data);
@@ -57,6 +45,20 @@ class ThrowExceptionHandler
             ],
             JSON_UNESCAPED_UNICODE
         );
+    }
+
+    /**
+     * websocket 异常日志数据记录
+     *
+     * @param Exception $e
+     */
+    public static function websocket(Exception $e)
+    {
+        $data         = $e->toArray();
+        // 拼接其他日志数据
+        $data['type'] = 'websocket';
+
+        self::report($e->getLevel(), $data);
     }
 
     /**
