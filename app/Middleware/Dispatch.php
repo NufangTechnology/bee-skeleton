@@ -22,6 +22,7 @@ class Dispatch extends Middleware
      * @param Context $context
      * @param mixed $parameters
      * @return mixed
+     * @throws \Bee\Router\Exception
      */
     public function call(Application $application, Context $context, $parameters = null)
     {
