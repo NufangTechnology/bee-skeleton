@@ -16,14 +16,14 @@ class Job extends Command
      *
      * @var string
      */
-    protected $name = 'worker';
+    protected $name = 'job';
 
     /**
      * 命令说明
      *
      * @var string
      */
-    protected $desc = 'Worker服务相关操作';
+    protected $desc = 'Job服务相关操作';
 
     /**
      * 初始化命令帮助信息
@@ -44,8 +44,8 @@ class Job extends Command
         // 注册使用示例信息
         $this->usage(
             $this->writer()->colorizer()->colors(''
-                . '<bold>server worker</end> <line>start</end> '
-                . '<comment>启动worker者服务</end><eol/>'
+                . '<bold>server job</end> <line>start</end> '
+                . '<comment>启动job者服务</end><eol/>'
             )
         );
     }
@@ -59,7 +59,7 @@ class Job extends Command
     public function execute($action = 'start', $force = false)
     {
         // 获取http服务
-        $http = Container::getDefault()->getShared('service.worker');
+        $http = Container::getDefault()->getShared('service.job');
 
         switch ($action) {
             case 'start':
