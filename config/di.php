@@ -21,7 +21,7 @@ $di->setShared('config.server', function () {
 
 // 注入路由配置
 $di->setShared('route.http', function () {
-    return require(ROUTE_PATH . '/http.php');
+    return require(CONFIG_PATH . '/route.php');
 });
 
 // 加载应用配置

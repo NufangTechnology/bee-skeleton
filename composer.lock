@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "adhocore/cli",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adhocore/php-cli.git",
-                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d"
+                "reference": "11a741d4f5a3b05938fc29eb79bcfad2049cb5d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adhocore/php-cli/zipball/9dbab2581b1797b9b37caf83102ec0335e046f7d",
-                "reference": "9dbab2581b1797b9b37caf83102ec0335e046f7d",
+                "url": "https://api.github.com/repos/adhocore/php-cli/zipball/11a741d4f5a3b05938fc29eb79bcfad2049cb5d5",
+                "reference": "11a741d4f5a3b05938fc29eb79bcfad2049cb5d5",
                 "shasum": ""
             },
             "require": {
@@ -60,7 +60,7 @@
                 "stream-input",
                 "stream-output"
             ],
-            "time": "2018-09-06T15:32:22+00:00"
+            "time": "2019-03-09T06:43:34+00:00"
         },
         {
             "name": "bee-framework/cli",
@@ -295,16 +295,16 @@
         },
         {
             "name": "bee-framework/router",
-            "version": "v1.2.0",
+            "version": "v1.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/NufangTechnology/bee-router.git",
-                "reference": "947de767e3aff52e9d43cfd2a7326a527a45a67a"
+                "reference": "aa9c6cc919fa5a0952302d9c51f2d59a09beefba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/NufangTechnology/bee-router/zipball/947de767e3aff52e9d43cfd2a7326a527a45a67a",
-                "reference": "947de767e3aff52e9d43cfd2a7326a527a45a67a",
+                "url": "https://api.github.com/repos/NufangTechnology/bee-router/zipball/aa9c6cc919fa5a0952302d9c51f2d59a09beefba",
+                "reference": "aa9c6cc919fa5a0952302d9c51f2d59a09beefba",
                 "shasum": ""
             },
             "require": {
@@ -328,7 +328,7 @@
                 }
             ],
             "description": "Bee框架路由组件",
-            "time": "2019-03-04T04:10:02+00:00"
+            "time": "2019-03-14T07:49:12+00:00"
         },
         {
             "name": "bee-framework/util",
