@@ -104,15 +104,20 @@ class HttpServer extends Server
      */
     public function onTask(SwooleHttpServer $server, SwooleTask $task)
     {
-        //任务的数据
-        $params = $task->data;
-        // 获取参数
-        $class  = $params['class'];
-        $method = $params['method'];
-        $data   = $params['data'];
+        try {
+            //任务的数据
+            $params = $task->data;
+            // 获取参数
+            $class  = $params['class'];
+            $method = $params['method'];
+            $data   = $params['data'];
 
-        // 调起应任务
-        (new $class)->{$method}($data);
+            // 调起应任务
+            (new $class)->{$method}($data);
+
+        } catch (\Throwable $e) {
+            ThrowExceptionHandler::uncaught($e);
+        }
     }
 
     /**
