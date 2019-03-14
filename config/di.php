@@ -16,6 +16,7 @@ $di->setShared('config.console', function () {
     return require(CONFIG_PATH . '/console.php');
 });
 
+// 中间件配置
 $di->setShared('config.middleware', function () {
     return require(CONFIG_PATH . '/middleware.php');
 });
@@ -43,7 +44,6 @@ $di->setShared('service.logger', function () use ($di) {
     $config = $di->getShared('config.server');
     return new \Bee\Logger\Adapter\SeasLog($config['logger']);
 });
-
 
 
 /**

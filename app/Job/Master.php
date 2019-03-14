@@ -16,7 +16,7 @@ class Master extends \Bee\Process\Master
     public function configure()
     {
         // 获取 worker 配置
-        $workers = Di::getDefault()->getShared('config.worker');
+        $workers = Di::getDefault()->getShared('config.job');
         foreach ($workers as $worker) {
             // 创建子进程
             $this->fork(new $worker['class'], $worker['name']);
