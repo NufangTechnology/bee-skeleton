@@ -19,9 +19,25 @@ $di->setShared('config.server', function () {
     return require(CONFIG_PATH . '/server.php');
 });
 
+// 注入路由配置
+$di->setShared('route.http', function () {
+    return require(ROUTE_PATH . '/http.php');
+});
+
 // 加载应用配置
 $di->setShared('config.db', function() {
     return require(RUNTIME_PATH . '/build.db.php');
+});
+
+// 注入路由组件
+$di->setShared('service.router', function () use ($di) {
+    // 路由规则
+    $rules  = $di->getShared('route.http');
+    // 示例化并挂载路由规则
+    $router = new \Bee\Router\Router();
+    $router->map($rules);
+
+    return $router;
 });
 
 // 注入 mysql 组件

@@ -32,7 +32,7 @@ class Route extends Middleware
         // 获取 URL PATH
         $urlPath = $request->getURI();
         // 获取router组件
-        $router  = Container::getDefault()->getShared('router');
+        $router  = Container::getDefault()->getShared('service.router');
 
         // 执行路由匹配
         $handler = $router->match($method, $urlPath);

@@ -5,7 +5,6 @@ use Bee\Di\Container;
 use Bee\Error\Notice;
 use Bee\Http\Application;
 use Bee\Http\Server;
-use Bee\Router\Router;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
 use Swoole\Http\Server as SwooleHttpServer;
@@ -19,9 +18,9 @@ use Swoole\Server\Task as SwooleTask;
 class HttpServer extends Server
 {
     /**
-     * @var Container
+     * @var array
      */
-    private $container;
+    private $middleware = [];
 
     /**
      * Server启动在主进程的主线程回调此方法
@@ -41,6 +40,7 @@ class HttpServer extends Server
      */
     public function onWorkerStart(SwooleHttpServer $server, $workerId)
     {
+        // 为进程设置名称后缀
         if ($server->taskworker) {
             swoole_set_process_name($this->name . ':task');
         } else {
@@ -52,17 +52,14 @@ class HttpServer extends Server
             ThrowExceptionHandler::error(new Notice($message, $code, $line, $file));
         }, E_ALL);
 
-        // 路由处理
-        $router    = new Router();
-        // 挂载路由
-        $router->map(require(CONFIG_PATH . '/routes.php'));
-
         // 路由与 server 注入容器全局共享
         $container = Container::getDefault();
-        $container->setShared('router', $router);
+
+        // 当前 http server 对象注入容器，全局共享
         $container->setShared('server', $server);
 
-        $this->container = $container;
+        // 获取中间件配置
+        $this->middleware = $container->getShared('config.middleware');
     }
 
     /**
@@ -89,7 +86,7 @@ class HttpServer extends Server
             $app = new Application($request, $response);
 
             try {
-                $app->map($this->container->getShared('config.middleware'))->handle();
+                $app->map($this->middleware)->handle();
             } catch (ThrowException $e) {
                 $response->end(ThrowExceptionHandler::http($e, $app->getContext()));
             }

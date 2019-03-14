@@ -25,27 +25,17 @@ class Dispatch extends Middleware
      */
     public function call(Application $application, Context $context, $parameters = null)
     {
-        $continue     = true;
         $routeHandler = $application->getRouteHandler();
 
-        try {
-            // 执行业务
-            $returnValue = $routeHandler->callMethod($application, $parameters);
-            // 检查是否需要 json 序列化
-            if ($context->isOutputJson()) {
-                $returnValue = json_encode($returnValue);
-            }
-        } catch (ThrowException $e) {
-            // 收集异常信息并记录日志
-            $returnValue = ThrowExceptionHandler::http($e, $context);
-
-            // 终止请求往下传递
-            $continue = false;
+        // 执行业务
+        $returnValue  = $routeHandler->callMethod($application, $parameters);
+        // 检查是否需要 json 序列化
+        if ($context->isOutputJson()) {
+            $returnValue = json_encode($returnValue);
         }
-
         // 将返回值注入上下文
         $context->setContent($returnValue);
 
-        return $continue;
+        return true;
     }
 }

@@ -16,6 +16,8 @@ define('ROOT_PATH',     __DIR__);
 define('RUNTIME_PATH',  ROOT_PATH . '/runtime');
 // 配置目录
 define('CONFIG_PATH',   ROOT_PATH . '/config');
+// 路由目录
+define('ROUTE_PATH',    ROOT_PATH . '/routes');
 
 
 /*
