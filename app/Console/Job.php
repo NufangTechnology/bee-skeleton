@@ -59,27 +59,27 @@ class Job extends Command
     public function execute($action = 'start', $force = false)
     {
         // 获取http服务
-        $http = Container::getDefault()->getShared('service.job');
+        $job = Container::getDefault()->getShared('service.job');
 
         switch ($action) {
             case 'start':
-                $http->start();
+                $job->start();
                 break;
 
             case 'stop':
-                $http->stop();
+                $job->stop();
                 break;
 
             case 'restart':
-                $http->restart($force);
+                $job->restart($force);
                 break;
 
             case 'shutdown':
-                $http->shutdown();
+                $job->shutdown();
                 break;
 
             case 'status':
-                $http->status();
+                $job->status();
                 break;
         }
     }
