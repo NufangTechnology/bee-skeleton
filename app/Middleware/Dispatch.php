@@ -1,12 +1,9 @@
 <?php
 namespace Star\Middleware;
 
-use Bee\Exception;
 use Bee\Http\Application;
 use Bee\Http\Middleware;
 use Bee\Http\Context;
-use Star\Util\ThrowException;
-use Star\Util\ThrowExceptionHandler;
 
 /**
  * 路由请求派发中间件
