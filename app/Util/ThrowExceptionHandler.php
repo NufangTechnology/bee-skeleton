@@ -135,16 +135,11 @@ class ThrowExceptionHandler
     public static function report(string $level, array $data)
     {
         if (empty(self::$logger)) {
-            $di            = Container::getDefault();
-            // 获取服务配置
-            $server        = $di->getShared('config.server');
-
-            self::$appName = $server['app_name'];
-            self::$logger  = $di->getShared('service.logger');
+            self::$logger  = Container::getDefault()->getShared('service.logger');
         }
 
         // 拼接应用名称
-        $data['app_name']  = self::$appName;
+        $data['app_name']  = APP_NAME;
 
         // 执行日志记录
         self::$logger->log($level, json_encode($data, JSON_UNESCAPED_UNICODE));
