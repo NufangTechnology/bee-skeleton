@@ -24,22 +24,22 @@ $di->setShared('config.middleware', function () {
 
 /**
  * ----------------------------------------------------------------------------------------
- *  系统服务配置
+ *  系统服务(http, logger)
  * ----------------------------------------------------------------------------------------
  */
 
-// 服务组件配置
+// 配置
 $di->setShared('config.server', function () {
     return require(CONFIG_PATH . '/server.php');
 });
 
-// 注入 Http 服务组件
+// Http 服务
 $di->setShared('service.http', function () use ($di) {
     $config = $di->getShared('config.server');
     return new \Star\Util\HttpServer($config['http']);
 });
 
-// 注入 logger （日志）组件
+// 日志服务
 $di->setShared('service.logger', function () use ($di) {
     $config = $di->getShared('config.server');
     return new \Bee\Logger\Adapter\SeasLog($config['logger']);
@@ -48,16 +48,16 @@ $di->setShared('service.logger', function () use ($di) {
 
 /**
  * ----------------------------------------------------------------------------------------
- *  路由服务配置
+ *  路由服务
  * ----------------------------------------------------------------------------------------
  */
 
-// 注入路由配置
+// 路由配置
 $di->setShared('route.http', function () {
     return require(CONFIG_PATH . '/route.php');
 });
 
-// 注入路由组件
+// 路由服务
 $di->setShared('service.router', function () use ($di) {
     // 路由规则
     $rules  = $di->getShared('route.http');
@@ -75,18 +75,18 @@ $di->setShared('service.router', function () use ($di) {
  * ----------------------------------------------------------------------------------------
  */
 
-// 加载应用配置
+// 数据库配置
 $di->setShared('config.db', function() {
     return require(RUNTIME_PATH . '/build.db.php');
 });
 
-// 注入 mysql 组件
+// mysql 服务
 $di->setShared('service.mysql', function () use ($di) {
     $config = $di->getShared('config.db');
     return new Bee\Db\MySQL($config['mysql']);
 });
 
-// 注入 redis 组件
+// redis 服务
 $di->setShared('service.redis', function () use ($di) {
     $config = $di->getShared('config.db');
     return new Bee\Db\Redis($config['redis']);
@@ -99,12 +99,12 @@ $di->setShared('service.redis', function () use ($di) {
  * ----------------------------------------------------------------------------------------
  */
 
-// 多进程 worker 配置
+// 配置
 $di->setShared('config.job', function () {
     return require(CONFIG_PATH . '/job.php');
 });
 
-// 注入多进程 worker程服务
+// 多进程服务
 $di->setShared('service.job', function () use ($di) {
     $config = $di->getShared('config.server');
     return new \Star\Job\Master($config['job']);
