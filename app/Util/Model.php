@@ -87,7 +87,7 @@ abstract class Model
      * @param string $sql
      * @param array $binds
      * @return array
-     * @throws MySQL\Exception
+     * @throws \Exception
      */
     public function findFirstByMaster(string $sql, array $binds = [])
     {
