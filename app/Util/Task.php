@@ -39,21 +39,4 @@ abstract class Task
     {
         return Container::getDefault()->getService($name);
     }
-
-    /**
-     * 发送小程序消息通知
-     *
-     * @param array $data
-     * @throws \Exception
-     */
-    protected function sendMiniNotify(array $data)
-    {
-        // 拼接参数
-        $data   = [
-            'type' => 'BNKG',
-            'data' => $data
-        ];
-
-        (new ThirdService)->post('/wx/mini/notify', $data);
-    }
 }
