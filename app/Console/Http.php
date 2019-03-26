@@ -44,7 +44,7 @@ class Http extends Command
         // 注册使用示例信息
         $this->usage(
             $this->writer()->colorizer()->colors(''
-                . '<bold>server http</end> <line>start</end> '
+                . '<bold>bee http</end> <line>start</end> '
                 . '<comment>启动HTTP者服务</end><eol/>'
             )
         );

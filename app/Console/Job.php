@@ -44,7 +44,7 @@ class Job extends Command
         // 注册使用示例信息
         $this->usage(
             $this->writer()->colorizer()->colors(''
-                . '<bold>server job</end> <line>start</end> '
+                . '<bold>bee job</end> <line>start</end> '
                 . '<comment>启动job者服务</end><eol/>'
             )
         );
