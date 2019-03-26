@@ -59,27 +59,27 @@ class Http extends Command
     public function execute($action = 'start', $force = false)
     {
         // 获取http服务
-        $http = Container::getDefault()->getShared('service.http');
+        $service = Container::getDefault()->getShared('service.http');
 
         switch ($action) {
             case 'start':
-                $http->start();
+                $service->start();
                 break;
 
             case 'stop':
-                $http->stop();
+                $service->stop();
                 break;
 
             case 'restart':
-                $http->restart($force);
+                $service->restart($force);
                 break;
 
             case 'shutdown':
-                $http->shutdown();
+                $service->shutdown();
                 break;
 
             case 'status':
-                $http->status();
+                $service->status();
                 break;
         }
     }
