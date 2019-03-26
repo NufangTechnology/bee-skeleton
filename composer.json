@@ -1,7 +1,7 @@
 {
-    "name": "xhb/app-management",
-    "license": "proprietary",
-    "description": "服务管理与日志收集",
+    "name": "bee-framework/skeleton",
+    "license": "MIT",
+    "description": "bee框架骨架",
     "type": "project",
     "authors": [
         {
@@ -12,9 +12,9 @@
     "require": {
         "php": ">=7.1",
         "ext-json": "*",
+        "bee-framework/cli": "^1.0",
         "bee-framework/di": "^1.1",
         "bee-framework/http": "^1.2",
-        "bee-framework/cli": "^1.0",
         "bee-framework/db": "^1.1",
         "bee-framework/logger": "^1.1",
         "bee-framework/process": "^1.1"
