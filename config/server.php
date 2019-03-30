@@ -19,7 +19,7 @@ return [
         ]
     ],
 
-    // 定时器配置
+    // Job 进程配置
     'job' => [
         'name'     => 'bee-job',
         'pidFile'  => RUNTIME_PATH . '/job.pid',
